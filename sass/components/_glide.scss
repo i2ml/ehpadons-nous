@@ -1,0 +1,34 @@
+.glide {
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0 none;
+    box-shadow: none;
+    padding: 0;
+
+    .icon {
+      width: 30px; height: 30px;
+    }
+
+    &--left {
+      right: calc(100% + 20px);
+      left: auto;
+
+      @include mobile() {
+        left: 20px;
+        right: auto;
+      }
+    }
+
+    &--right {
+      left: calc(100% + 20px);
+      right: auto;
+
+      @include mobile() {
+        right: 20px;
+        left: auto;
+      }
+    }
+  }
+}

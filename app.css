@@ -1,0 +1,1573 @@
+/* line 3, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+  /* line 13, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide * {
+    box-sizing: inherit; }
+  /* line 17, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide__track {
+    overflow: hidden; }
+  /* line 21, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -ms-touch-action: pan-Y;
+        touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    will-change: transform; }
+    /* line 35, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+    .glide__slides--dragging {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+  /* line 40, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide__slide {
+    width: 100%;
+    height: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    white-space: normal;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent; }
+    /* line 49, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+    .glide__slide a {
+      -webkit-user-select: none;
+              user-select: none;
+      -webkit-user-drag: none;
+      -moz-user-select: none;
+      -ms-user-select: none; }
+  /* line 57, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide__arrows {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  /* line 62, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide__bullets {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+  /* line 67, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.core.scss */
+  .glide--rtl {
+    direction: rtl; }
+
+/* line 9, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+.glide__arrow {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1; }
+  /* line 28, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__arrow:focus {
+    outline: none; }
+  /* line 29, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__arrow:hover {
+    border-color: white; }
+  /* line 31, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__arrow--left {
+    left: 2em; }
+  /* line 35, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__arrow--right {
+    right: 2em; }
+  /* line 39, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__arrow--disabled {
+    opacity: 0.33; }
+
+/* line 44, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+.glide__bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 2em;
+  left: 50%;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  transform: translateX(-50%); }
+
+/* line 54, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+.glide__bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0.25em; }
+  /* line 67, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__bullet:focus {
+    outline: none; }
+  /* line 71, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__bullet:hover, .glide__bullet:focus {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5); }
+  /* line 77, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+  .glide__bullet--active {
+    background-color: white; }
+
+/* line 82, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+.glide--swipeable {
+  cursor: grab;
+  cursor: -webkit-grab; }
+
+/* line 88, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss */
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -webkit-grabbing; }
+
+/**
+ * Colors map.
+ */
+/**
+ * Front-end function.
+ */
+/* Fluid setup */
+/* --------------------------------------------------------------------------------- */
+/**
+ *
+ */
+/**
+ *
+ */
+/**
+ * [$desktop description]
+ * @type {Boolean}
+ */
+/**
+ * Sugar for typing directly a property in multiple MQ in one line
+ */
+/* SHORTCUTS */
+/* line 358, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/tools/_mq.scss */
+.mobile-show {
+  display: none; }
+  @media (max-width: 42.49em) {
+    /* line 358, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/tools/_mq.scss */
+    .mobile-show {
+      display: block; } }
+
+@media (max-width: 42.49em) {
+  /* line 362, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/tools/_mq.scss */
+  .mobile-hide {
+    display: none; } }
+
+/**
+ * Scales
+ */
+/**
+ * Weights
+ */
+/**
+ * Colors
+ */
+/* default */
+/**
+ *
+ */
+/**
+ * Front-end mixin.
+ */
+/**
+ * Truncates text overflow.
+ */
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* line 25, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+ul, li {
+  list-style: none; }
+
+@-ms-viewport {
+  width: auto !important; }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  list-style-image: url(data:0); }
+
+/* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+img {
+  -moz-user-drag: none;
+  -webkit-user-drag: none; }
+
+/* line 43, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 47, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 53, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+a {
+  outline: 0;
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit; }
+
+/* line 66, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+h1, h2, h3, h4 {
+  font-size: 1em;
+  font-weight: normal; }
+
+/* line 71, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit; }
+
+/* line 81, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 86, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+input, select {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: middle;
+  font-size: 1em; }
+
+/* line 94, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+textarea {
+  resize: none;
+  outline: 0; }
+
+/* line 105, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+table {
+  font-size: 1em; }
+
+/* line 109, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+button::-moz-focus-inner {
+  border: 0; }
+
+/* line 113, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_reset.scss */
+[disabled] {
+  pointer-events: none; }
+
+@font-face {
+  font-family: callunaweb;
+  src: url(./assets/fonts/Calluna-Bold.otf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: callunaweb;
+  src: url(./assets/fonts/Calluna-Black.otf);
+  font-weight: 500; }
+
+@font-face {
+  font-family: timesweb;
+  src: url(./assets/fonts/Times.ttc);
+  font-weight: 400; }
+
+@font-face {
+  font-family: avenirweb;
+  src: url(./assets/fonts/Avenir-Next-Condensed.ttc);
+  font-weight: 400; }
+
+/* line 9, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+html {
+  font-family: timesweb;
+  font-weight: 400;
+  font-size: 18px;
+  color: #452771;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  position: relative;
+  min-height: 100%;
+  background-color: #fff; }
+  @media (min-width: 64.0625em) {
+    /* line 9, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+    html {
+      text-rendering: geometricPrecision; } }
+
+/* line 30, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+body {
+  overflow-x: hidden; }
+
+/* line 34, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+img {
+  max-width: 100%; }
+
+/* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+.sep {
+  font-size: 8px;
+  text-align: center;
+  color: #CB308A;
+  margin-bottom: 30px;
+  letter-spacing: 5px; }
+
+/* MAIN */
+/* --------------------------------------------------------------------------------- */
+/* line 49, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+#main {
+  display: block;
+  position: relative; }
+
+/* line 54, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+#svg-store {
+  display: none; }
+
+/* line 58, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+.inner, [class$="-inner"] {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 1000px;
+  max-width: 100%;
+  padding-left: 40px;
+  padding-right: 40px; }
+  @media (max-width: 42.49em) {
+    /* line 58, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+    .inner, [class$="-inner"] {
+      padding-left: 20px; } }
+  @media (max-width: 42.49em) {
+    /* line 58, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+    .inner, [class$="-inner"] {
+      padding-right: 20px; } }
+
+/* line 73, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+.background-purple:before, .offers-seminaire:before {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  height: 100vw;
+  border-radius: 100%;
+  background: #DAD4E2;
+  box-shadow: 0 -7px 5px -5px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -100px); }
+
+/* line 84, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+.background-purple:after, .offers-seminaire:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  height: 100vw;
+  border-radius: 100%;
+  background: #DAD4E2;
+  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, 100px); }
+
+/* line 97, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+.background-brain, .contactSent, .references, .offers, .formations {
+  background: url(./assets/images/bg-labyrinth.jpg);
+  background-size: 100%;
+  background-position: top center;
+  position: relative;
+  z-index: 1; }
+  /* line 106, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+  .background-brain:before, .contactSent:before, .references:before, .offers:before, .formations:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, white 100%); }
+
+/* line 119, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+#wpadminbar {
+  display: none; }
+
+/* line 122, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+video::-internal-media-controls-download-button {
+  display: none; }
+
+/* line 123, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+video::-webkit-media-controls-enclosure {
+  overflow: hidden; }
+
+/* line 124, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+video::-webkit-media-controls-panel {
+  width: calc(100% + 30px); }
+
+/* Common classes */
+/* --------------------------------------------------------------------------------- */
+/* line 131, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/_base.scss */
+[hidden],
+.is-hidden {
+  display: none; }
+
+/* line 2, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_title.scss */
+.title-rounded, .offers-seminaire-content > h2, .teambuilding h2, .formations h2 {
+  font-family: callunaweb;
+  color: #CB308A;
+  font-size: 35px;
+  white-space: nowrap;
+  background: white;
+  border: 2px solid #CB308A;
+  padding: 5px 30px 0 30px;
+  border-radius: 30px;
+  margin-bottom: 30px; }
+
+/* line 12, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_title.scss */
+.title-bordered, .formations h3 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-bottom: 2px solid #452771;
+  max-width: 400px;
+  margin: 20px 0 30px 0; }
+  /* line 19, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_title.scss */
+  .title-bordered span, .formations h3 span {
+    font-family: callunaweb;
+    white-space: nowrap;
+    color: #452771;
+    font-weight: 500;
+    border: 2px solid #452771;
+    border-bottom: 0 none;
+    padding: 10px; }
+
+/* line 2, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+.glide__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0 none;
+  box-shadow: none;
+  padding: 0; }
+  /* line 10, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+  .glide__arrow .icon {
+    width: 30px;
+    height: 30px; }
+  /* line 14, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+  .glide__arrow--left {
+    right: calc(100% + 20px);
+    left: auto; }
+    @media (max-width: 42.49em) {
+      /* line 14, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+      .glide__arrow--left {
+        left: 20px;
+        right: auto; } }
+  /* line 24, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+  .glide__arrow--right {
+    left: calc(100% + 20px);
+    right: auto; }
+    @media (max-width: 42.49em) {
+      /* line 24, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_glide.scss */
+      .glide__arrow--right {
+        right: 20px;
+        left: auto; } }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+.dialog {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1043;
+  overflow-y: auto; }
+  /* line 11, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog.visible {
+    display: block; }
+  /* line 15, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-inner {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    min-height: 100vh; }
+  /* line 23, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    background: #CB308A; }
+  /* line 32, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-body {
+    position: relative;
+    max-width: calc(100% - 40px);
+    margin: 150px 0 60px 0;
+    background: white; }
+  /* line 39, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-form {
+    padding: 40px;
+    position: relative; }
+  /* line 44, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-alert {
+    border: 2px solid #F6A623;
+    font-size: 22px;
+    color: #F6A623;
+    text-align: center;
+    padding: 40px;
+    position: relative; }
+  /* line 51, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-content {
+    padding: 40px;
+    position: relative;
+    background: #F6A623; }
+    /* line 56, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+    .dialog-content a {
+      color: #fff;
+      box-shadow: none; }
+    /* line 61, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+    .dialog-content h2 {
+      font-size: 22px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 20px; }
+  /* line 67, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-close {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    cursor: pointer; }
+    /* line 75, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+    .dialog-close .icon {
+      width: 30px;
+      height: 30px; }
+  /* line 81, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/components/_dialog.scss */
+  .dialog-source {
+    display: none; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contactSent.scss */
+.contactSent {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  min-height: 100vh; }
+  /* line 10, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contactSent.scss */
+  .contactSent p {
+    position: relative;
+    width: 400px;
+    max-width: 90vw;
+    background: white;
+    padding: 20px; }
+    /* line 18, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contactSent.scss */
+    .contactSent p a {
+      font-weight: 500;
+      color: #CB308A;
+      text-decoration: underline; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+.contact {
+  background: #DAD4E2;
+  padding: 50px 0; }
+  /* line 5, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+  .contact-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 10, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-inner p {
+      margin-bottom: 30px; }
+    /* line 13, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-inner h2 {
+      font-family: callunaweb;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 40px; }
+  /* line 20, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+  .contact-info {
+    text-align: center;
+    font-size: 16px; }
+  /* line 24, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+  .contact form {
+    width: 800px;
+    max-width: 100%;
+    margin-bottom: 40px; }
+    /* line 29, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact form input, .contact form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      border: 2px solid #CB308A;
+      padding: 5px;
+      font-family: timesweb;
+      font-size: 18px; }
+      /* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+      .contact form input:-ms-input-placeholder, .contact form textarea:-ms-input-placeholder {
+        color: #CB308A; }
+      .contact form input::placeholder, .contact form textarea::placeholder {
+        color: #CB308A; }
+    /* line 42, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact form button {
+      margin: 0 auto;
+      background: #CB308A;
+      color: #fff;
+      font-weight: 500;
+      padding: 4px 20px; }
+  /* line 51, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+  .contact-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-item-align: stretch;
+        align-self: stretch; }
+    @media (max-width: 42.49em) {
+      /* line 51, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+      .contact-footer {
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+    /* line 60, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-footer-item {
+      margin-bottom: 40px; }
+    /* line 64, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-footer h3 {
+      font-family: callunaweb;
+      font-size: 22px;
+      color: #CB308A;
+      font-weight: 500;
+      margin-bottom: 20px; }
+      @media (max-width: 42.49em) {
+        /* line 64, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+        .contact-footer h3 {
+          font-size: 35px;
+          text-align: center; } }
+    /* line 70, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-footer ul {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+      /* line 75, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+      .contact-footer ul li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        margin-bottom: 10px; }
+        /* line 80, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+        .contact-footer ul li:first-child {
+          background: white;
+          border: 2px solid #CB308A;
+          border-radius: 20px;
+          padding: 5px 10px;
+          transform: translateX(-10px);
+          font-weight: bold; }
+        /* line 89, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+        .contact-footer ul li .icon {
+          width: 25px;
+          height: 25px;
+          margin-right: 10px; }
+    /* line 98, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_contact.scss */
+    .contact-footer a img {
+      width: 40px;
+      margin: 0 10px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_references.scss */
+.references {
+  box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.4);
+  padding: 50px 0; }
+  /* line 6, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_references.scss */
+  .references-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 11, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_references.scss */
+    .references-inner p {
+      margin-bottom: 30px; }
+    /* line 14, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_references.scss */
+    .references-inner h2 {
+      font-family: callunaweb;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 40px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+.intro {
+  background: url(./assets/images/bg-labyrinth.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: calc(100vh); }
+  /* line 13, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+  .intro:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.7) 0%, white 100%); }
+  /* line 22, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+  .intro-logo {
+    position: relative;
+    width: 90vw;
+    margin: 20px 0 40px 0; }
+    @media (max-width: 42.49em) {
+      /* line 22, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+      .intro-logo {
+        display: none; } }
+  /* line 30, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+  .intro-logoMobile {
+    position: relative;
+    width: 80vw;
+    display: none; }
+    @media (max-width: 42.49em) {
+      /* line 30, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+      .intro-logoMobile {
+        display: block; } }
+  /* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+  .intro-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); }
+    /* line 44, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_intro.scss */
+    .intro-scroll img {
+      width: 30px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+.menu {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100px;
+  background: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.4); }
+  @media (max-width: 64.0525em) {
+    /* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+    .menu {
+      height: 80px; }
+      /* line 15, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu .menu-logo {
+        transform: scale(0.7) translateY(20px); } }
+  @media (max-width: 42.49em) {
+    /* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+    .menu {
+      display: none; } }
+  /* line 25, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+  .menu.is-scrolled .menu-logo {
+    transform: scale(0.7) translateY(20px); }
+    @media (max-width: 64.0525em) {
+      /* line 25, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu.is-scrolled .menu-logo {
+        transform: scale(0.5) translateY(20px); } }
+  /* line 33, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+  .menu-nav {
+    font-family: callunaweb;
+    color: #452771;
+    font-weight: 500;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: nowrap; }
+    @media (max-width: 64.0525em) {
+      /* line 33, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu-nav {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: start;
+            align-items: flex-start; } }
+    @media (max-width: 42.49em) {
+      /* line 33, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu-nav {
+        display: none; } }
+    /* line 48, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+    .menu-nav a {
+      border-bottom: 1px solid white; }
+      /* line 50, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu-nav a:hover {
+        border-color: #CB308A; }
+  /* line 56, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+  .menu-logo {
+    display: block;
+    margin: 0 40px;
+    height: 180px;
+    width: 180px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    border-radius: 100%;
+    background: white;
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    position: relative;
+    transition: transform 0.05s linear; }
+    /* line 71, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+    .menu-logo img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 130px;
+      transform: translate(-50%, -50%); }
+  /* line 79, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+  .menu-sep {
+    font-size: 12px;
+    margin: 0 10px;
+    display: inline-block;
+    color: #CB308A; }
+    @media (max-width: 64.0525em) {
+      /* line 79, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+      .menu-sep {
+        display: none; } }
+
+/* line 91, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_menu.scss */
+#menu-scrolled-detector {
+  height: 1px;
+  background: transparent; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+.about {
+  position: relative;
+  z-index: 2; }
+  /* line 5, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+  .about-container {
+    background: #DAD4E2;
+    box-shadow: 0 0px 20px 0px rgba(69, 39, 113, 0.8);
+    padding: 100px 0 50px 0; }
+    @media (max-width: 42.49em) {
+      /* line 5, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+      .about-container {
+        padding: 50px 0; } }
+  /* line 16, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+  .about-enter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    font-family: callunaweb;
+    font-size: 22px;
+    margin-bottom: 40px; }
+    @media (max-width: 42.49em) {
+      /* line 16, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+      .about-enter {
+        display: none; } }
+    /* line 29, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+    .about-enter img {
+      margin: 0 0 10px 10px;
+      width: 200px; }
+  /* line 34, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+  .about-content {
+    margin-bottom: 40px; }
+    /* line 37, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+    .about-content h2 {
+      font-family: callunaweb;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 40px; }
+    /* line 42, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+    .about-content p {
+      text-align: center; }
+      /* line 45, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+      .about-content p strong {
+        color: #CB308A;
+        font-weight: bold; }
+  /* line 51, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+  .about video {
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+    @media (max-width: 42.49em) {
+      /* line 51, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_about.scss */
+      .about video {
+        height: 300px; } }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+.offers {
+  padding: 50px 0 0 0; }
+  /* line 5, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-enter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    font-family: callunaweb;
+    font-size: 22px;
+    margin-bottom: 40px; }
+    /* line 14, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-enter img {
+      margin: 0 0 10px 10px;
+      width: 200px; }
+  /* line 20, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-content {
+    margin-bottom: 40px; }
+    /* line 23, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-content h2 {
+      font-family: callunaweb;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 40px; }
+    @media (max-width: 42.49em) {
+      /* line 28, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-content img {
+        transform: scale(1.4);
+        margin-bottom: 40px; } }
+    /* line 34, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-content p {
+      text-align: center; }
+      /* line 37, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-content p strong {
+        color: #CB308A;
+        font-weight: bold; }
+  /* line 43, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers iframe {
+    width: 100%;
+    height: 600px;
+    display: block;
+    margin: 0 auto; }
+  /* line 50, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: stretch;
+        align-items: stretch; }
+    @media (max-width: 42.49em) {
+      /* line 50, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-items {
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-align: center;
+            align-items: center; } }
+  /* line 61, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-item {
+    width: 50%;
+    padding: 0 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: relative; }
+    @media (max-width: 64.0525em) {
+      /* line 61, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-item {
+        padding: 0 10px; } }
+    @media (max-width: 42.49em) {
+      /* line 61, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-item {
+        width: calc(100% - 20px);
+        padding: 0; } }
+    /* line 78, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item .glide img {
+      display: block;
+      height: 300px;
+      width: 500px;
+      object-fit: cover; }
+    /* line 85, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item .glide .glide__arrow--left {
+      right: auto;
+      left: 20px; }
+    /* line 86, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item .glide .glide__arrow--right {
+      left: auto;
+      right: 20px; }
+    /* line 89, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item-map {
+      position: absolute;
+      z-index: 1;
+      top: 20px;
+      background: white;
+      padding: 10px; }
+      /* line 96, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .is-cxv .offers-item-map {
+        right: 0; }
+      /* line 97, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .is-cxs .offers-item-map {
+        left: 0; }
+      /* line 99, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-item-map .icon {
+        width: 30px;
+        height: 30px; }
+        /* line 101, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .is-cxv .offers-item-map .icon {
+          fill: #1D3461; }
+        /* line 102, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .is-cxs .offers-item-map .icon {
+          fill: #452771; }
+    /* line 106, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item-content {
+      background: white;
+      padding: 20px 40px 70px 40px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+      @media (max-width: 64.0525em) {
+        /* line 106, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .offers-item-content {
+          padding: 20px 20px 70px 20px; } }
+    /* line 118, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item-logo {
+      width: 300px;
+      display: block;
+      margin: 0 auto 20px auto; }
+    /* line 124, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item-list {
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+      /* line 127, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-item-list li {
+        font-family: avenirweb;
+        display: -ms-flexbox;
+        display: flex;
+        color: #1D3461;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 20px; }
+        /* line 133, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .offers-item-list li .icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px; }
+          /* line 138, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+          .is-cxv .offers-item-list li .icon {
+            fill: #00FFFF; }
+          /* line 139, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+          .is-cxs .offers-item-list li .icon {
+            fill: #F6A623; }
+    /* line 144, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-item-cta {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      margin: 0 auto;
+      padding: 0 4px;
+      font-family: avenirweb;
+      font-size: 22px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 500; }
+      /* line 151, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .is-cxv .offers-item-cta {
+        background: #1D3461; }
+      /* line 152, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .is-cxs .offers-item-cta {
+        background: #452771; }
+  /* line 156, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-timeline {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    /* line 158, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-timeline img {
+      width: 300px; }
+  /* line 163, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+  .offers-seminaire {
+    position: relative;
+    margin-top: -20px;
+    overflow: hidden;
+    box-shadow: 0 0px 20px 0px rgba(69, 39, 113, 0.8); }
+    /* line 172, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-seminaire-container {
+      display: -ms-flexbox;
+      display: flex;
+      background: #DAD4E2;
+      position: relative;
+      padding: 40px 0;
+      z-index: 10; }
+    /* line 181, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-seminaire-inner {
+      display: -ms-flexbox;
+      display: flex; }
+      @media (max-width: 42.49em) {
+        /* line 181, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .offers-seminaire-inner {
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+    /* line 188, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-seminaire-content {
+      padding: 0 40px;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; }
+      /* line 198, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-seminaire-content > p {
+        margin-bottom: 20px;
+        text-align: center; }
+    /* line 204, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+    .offers-seminaire-list {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+      /* line 208, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+      .offers-seminaire-list li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        font-style: italic;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 20px; }
+        /* line 214, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_offers.scss */
+        .offers-seminaire-list li img {
+          width: 60px;
+          height: 60px;
+          margin-bottom: 10px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+.teambuilding {
+  position: relative;
+  z-index: 2;
+  background: #DAD4E2;
+  box-shadow: 0 0px 20px 0px rgba(69, 39, 113, 0.8);
+  padding: 100px 0 50px 0; }
+  /* line 8, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+  .teambuilding-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+  /* line 18, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+  .teambuilding-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    /* line 23, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+    .teambuilding-list > a {
+      width: 21%;
+      margin: 0 2% 40px 2%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; }
+      @media (max-width: 42.49em) {
+        /* line 23, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+        .teambuilding-list > a {
+          width: 48%;
+          margin: 0 1% 40px 1%; } }
+      /* line 37, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+      .teambuilding-list > a:hover img {
+        transform: scale(1.05); }
+      /* line 42, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+      .teambuilding-list > a img {
+        width: 150px;
+        transition: transform 0.1s ease-out; }
+      /* line 46, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+      .teambuilding-list > a .icon {
+        width: 30px;
+        height: 30px;
+        transform: translateY(-50%); }
+      /* line 52, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuilding.scss */
+      .teambuilding-list > a span {
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+        font-family: callunaweb;
+        color: #CB308A;
+        font-weight: 500;
+        text-align: center; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+.teambuildingDialog {
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  width: 980px; }
+  /* line 7, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+  .teambuildingDialog-icon {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding: 0 50px; }
+    @media (max-width: 42.49em) {
+      /* line 7, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+      .teambuildingDialog-icon {
+        display: none; } }
+    /* line 18, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+    .teambuildingDialog-icon img {
+      width: 150px;
+      height: 150px; }
+  /* line 24, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+  .teambuildingDialog-content {
+    position: relative;
+    background: white;
+    padding: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    width: 400px;
+    margin: 0 30px 0 0; }
+    @media (max-width: 42.49em) {
+      /* line 24, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+      .teambuildingDialog-content {
+        margin: 0; } }
+    /* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+    .teambuildingDialog-content h3 {
+      font-family: callunaweb;
+      text-align: center;
+      font-size: 35px;
+      color: #CB308A;
+      font-weight: 500;
+      margin-bottom: 20px; }
+    /* line 44, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+    .teambuildingDialog-content ul {
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      margin-bottom: 20px; }
+      /* line 48, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+      .teambuildingDialog-content ul li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        margin-bottom: 5px;
+        font-family: callunaweb;
+        font-weight: 500; }
+        /* line 57, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+        .teambuildingDialog-content ul li img {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px; }
+    /* line 65, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+    .teambuildingDialog-content p {
+      text-align: center;
+      margin-bottom: 20px; }
+    /* line 70, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_teambuildingDialog.scss */
+    .teambuildingDialog-content a {
+      font-weight: 500;
+      font-size: 22px;
+      color: #fff;
+      background: #CB308A;
+      padding: 3px 15px;
+      border-radius: 20px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+.expertDialog {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 400px;
+  max-width: 100%;
+  padding: 0 20px 20px 20px;
+  position: relative; }
+  /* line 12, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+  .expertDialog-icon {
+    margin: -100px 0 20px 0; }
+    /* line 15, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+    .expertDialog-icon img {
+      border-radius: 100%; }
+  /* line 20, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+  .expertDialog-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 26, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+    .expertDialog-content h3 {
+      font-family: callunaweb;
+      text-align: center;
+      font-size: 35px;
+      color: #CB308A;
+      font-weight: 500; }
+    /* line 31, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+    .expertDialog-content h4 {
+      font-family: callunaweb;
+      text-align: center;
+      font-size: 22px;
+      color: #CB308A;
+      margin-bottom: 20px; }
+    /* line 37, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+    .expertDialog-content p {
+      text-align: center;
+      margin-bottom: 40px; }
+  /* line 43, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+  .expertDialog-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 48, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+    .expertDialog-links a {
+      border-right: 2px solid #452771;
+      padding-right: 5px;
+      margin-right: 5px; }
+      /* line 53, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+      .expertDialog-links a:last-child {
+        border: 0 none; }
+      /* line 57, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_expertDialog.scss */
+      .expertDialog-links a img {
+        height: 30px; }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+.formations {
+  box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.4);
+  padding: 50px 0; }
+  /* line 6, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations-inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+  /* line 12, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations p {
+    margin-bottom: 20px; }
+  /* line 18, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations h3 {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch; }
+  /* line 23, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  /* line 28, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations-item {
+    width: 21%;
+    margin: 0 2% 60px 2%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
+    @media (max-width: 64.0525em) {
+      /* line 28, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+      .formations-item {
+        width: 31%;
+        margin: 0 1% 60px 1%; } }
+    @media (max-width: 42.49em) {
+      /* line 28, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+      .formations-item {
+        width: 48%;
+        margin: 0 1% 40px 1%; } }
+    /* line 47, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-item:hover img {
+      transform: scale(1.05); }
+    /* line 50, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-item:hover .formations-item-more {
+      background: white;
+      color: #CB308A; }
+    /* line 56, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-item img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+      transition: transform 0.1s linear; }
+    /* line 62, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-item p {
+      font-family: callunaweb;
+      color: #CB308A;
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+    /* line 67, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-item-more {
+      font-family: callunaweb;
+      color: #fff;
+      font-weight: 500;
+      background: #CB308A;
+      border: 2px solid #CB308A;
+      border-radius: 40px;
+      padding: 5px 15px;
+      transition: all 0.1s linear; }
+  /* line 78, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+  .formations-experts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    /* line 83, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+    .formations-experts > a {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin: 0 10px 40px 10px;
+      transition: transform 0.1s linear; }
+      /* line 88, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+      .formations-experts > a img {
+        margin-bottom: 0px;
+        border-radius: 100%; }
+      /* line 93, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+      .formations-experts > a h3 {
+        text-align: center;
+        border-bottom: 0 none;
+        margin: 0; }
+      @media (max-width: 42.49em) {
+        /* line 83, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+        .formations-experts > a {
+          margin: 0 10px 20px 10px; } }
+      /* line 103, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_formations.scss */
+      .formations-experts > a:hover {
+        transform: scale(1.05); }
+
+/* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_secondarynav.scss */
+.secondarynav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  left: 0;
+  z-index: 1000; }
+  @media (max-width: 64.0525em) {
+    /* line 1, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_secondarynav.scss */
+    .secondarynav {
+      display: none; } }
+  /* line 11, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_secondarynav.scss */
+  .secondarynav-content {
+    padding-top: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 26, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_secondarynav.scss */
+  .secondarynav a {
+    font-family: callunaweb;
+    background: #CB308A;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 0 5px 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #CB308A;
+    margin-bottom: 5px;
+    transition: all 0.1s linear; }
+    /* line 38, /Users/vwasteels/code/cortexscape/wp-content/themes/cortexagency/sass/views/_secondarynav.scss */
+    .secondarynav a:hover {
+      color: #CB308A;
+      background: white; }

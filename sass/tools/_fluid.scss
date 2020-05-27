@@ -1,0 +1,105 @@
+
+/* Fluid setup */
+/* --------------------------------------------------------------------------------- */
+
+
+// TODO: move this
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+/**
+ *
+ */
+
+@function fluid-value($amount) {
+	// only process unitless, non-zero values
+	@if number != type-of($amount) or false == unitless($amount) or $amount == 0 {
+		@return $amount;
+	}
+
+	$breakpoint: wide;
+
+	@if length($mq-context) > 0 {
+		// XXX refactor this
+		@if map-get($mq-context, until) {
+			$breakpoint: map-get($mq-context, until);
+		} @else {
+			$breakpoint: map-get($mq-context, from);
+		}
+
+		// XXX
+		@if (mobile == $breakpoint) {
+			$breakpoint: small;
+		}
+	}
+
+	$breakpoint-width: strip-units(mq-get-breakpoint-width($breakpoint));
+	$base-size: map-get($font-sizes, $breakpoint);
+
+    $value: default;
+
+	@if vw == unit($base-size) {
+		$value: ($amount / $breakpoint-width * 100 / strip-units($base-size)) * 1rem;
+	}
+	@else {
+		$value: ($amount / strip-units($base-size)) * 1rem;
+	}
+
+	// mitigates bad subpixel rendering by rounding to 1 decimal
+	$value: round($value * 10) / 10;
+
+	@return $value;
+}
+
+/**
+ *
+ */
+@mixin fluid-property($property, $values) {
+	// cast single value to list
+	@if list != type-of($values) {
+		$values: append((), $values);
+	}
+
+	// make all values fluid
+	@for $i from 1 through length($values) {
+		$values: set-nth($values, $i, fluid-value(nth($values, $i)));
+	}
+
+	// apply the rule
+	#{$property}: $values;
+}
+
+/**
+ * [$desktop description]
+ * @type {Boolean}
+ */
+@mixin fluid(
+	$property,
+	$desktop: false,
+	$tablet: false,
+	$wide: false,
+	$mobile: false
+) {
+	@if $wide {
+		@include mq($from: wide) {
+			@include fluid-property($property, $wide);
+		}
+	}
+
+	@if $desktop {
+		@include fluid-property($property, $desktop);
+	}
+
+	@if $tablet {
+		@include mq($until: tablet) {
+			@include fluid-property($property, $tablet);
+		}
+	}
+
+	@if $mobile {
+		@include mq($until: mobile) {
+			@include fluid-property($property, $mobile);
+		}
+	}
+}
