@@ -1,20 +1,41 @@
 @font-face {
-  font-family: callunaweb;
-  src: url(./assets/fonts/Calluna-Bold.otf);
+  font-family: 'adventproweb';
+  src: url(./assets/fonts/Advent_Pro/AdventPro-Thin.ttf);
+  // font-weight: 100;
+}
+
+@font-face {
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-Regular.ttf);
   font-weight: 400;
 }
 @font-face {
-  font-family: callunaweb;
-  src: url(./assets/fonts/Calluna-Black.otf);
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-Bold.ttf);
   font-weight: 500;
 }
 @font-face {
-  font-family: timesweb;
-  src: url(./assets/fonts/Times.ttc);
-  font-weight: 400;
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-BoldItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-Thin.ttf);
+  font-weight: 300;
 }
 @font-face {
-  font-family: avenirweb;
-  src: url(./assets/fonts/Avenir-Next-Condensed.ttc);
-  font-weight: 400;
+  font-family: 'ralewayweb';
+  src: url(./assets/fonts/Raleway/Raleway-ThinItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
 }

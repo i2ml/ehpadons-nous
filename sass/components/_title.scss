@@ -1,6 +1,6 @@
 .title {
   &-rounded {
-    font-family: callunaweb;
+    font-family: $titleFont;
     @include typo(pink xlarge nowrap);
     background: white;
     border: 2px solid color(pink);
@@ -17,7 +17,7 @@
     margin:  20px 0 30px 0;
 
     span {
-      font-family: callunaweb;
+      font-family: $titleFont;
       @include typo(nowrap purple bold);
       border: 2px solid color(purple);
       border-bottom: 0 none;

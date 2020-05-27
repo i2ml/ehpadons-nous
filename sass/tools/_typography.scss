@@ -3,7 +3,6 @@
  */
 
 $scales: (
-  xtiny: 10px,   /* 10 */
   tiny: 12px,      /* 12 */
   small: 16px,   /* 14 */
   normal: 18px,  /* 16, default */
@@ -11,17 +10,6 @@ $scales: (
   xlarge: 35px,  /* 22 */
   xxlarge: 50px  /* 36 */
 );
-
-
-// $scales: (
-//   xtiny: 0.9em,   /* 10 */
-//   tiny: 1em,      /* 12 */
-//   small: 1.1em,   /* 14 */
-//   normal: 1.3em,  /* 16, default */
-//   large: 1.5em,   /* 18 */
-//   xlarge: 1.8em,  /* 22 */
-//   xxlarge: 2.6em  /* 36 */
-// );
 
 
 @function fontscale($name) {
@@ -56,25 +44,6 @@ $weights: (
   @return map-get($weights, $name);
 }
 
-%weight-thin    { font-weight: weight(thin);    }
-%weight-regular { font-weight: weight(regular); }
-%weight-bold    { font-weight: weight(bold);    }
-
-/**
- * Colors
- */
-
-// shades of grey
-%color-lighter  { color: color(lighter); }
-%color-light    { color: color(light); }
-%color-dark     { color: color(dark); }
-%color-darker   { color: color(darker); }  /* default */
-
-// errors & alerts
-%color-success  { color: color(success); }
-%color-warning  { color: color(warning); }
-%color-danger   { color: color(error); }
-
 /**
  *
  */
@@ -83,38 +52,20 @@ $weights: (
   $breakpoint: (length($mq-context) > 0);
 
   @each $arg in $args {
-    @if $arg == uppercase {
-      text-transform: uppercase;
-    }
-    @elseif $arg == lowercase {
-      text-transform: lowercase;
-    }
-    @elseif $arg == underline {
-      text-decoration: underline;
-    }
-    @else if $arg == italic {
-      font-style: italic;
-    }
-    @else if $arg == center {
-      text-align: center;
-    }
-    @else if $arg == left {
-      text-align: left;
-    }
-    @else if $arg == right {
-      text-align: right;
-    }
-    @else if $arg == justify {
-      text-align: justify;
-    }
-    @else if $arg == Ailerons {
-      font-family: Ailerons;
-    }
-    @else if $arg == nowrap {
+    @if $arg == uppercase { text-transform: uppercase; }
+    @elseif $arg == lowercase { text-transform: lowercase; }
+    @elseif $arg == underline { text-decoration: underline; }
+    @else if $arg == italic { font-style: italic; }
+    @else if $arg == center { text-align: center; }
+    @else if $arg == left { text-align: left; }
+    @else if $arg == right { text-align: right; }
+    @else if $arg == justify { text-align: justify; }
+    @else if $arg == nowrap { white-space: nowrap; }
+    @else if $arg == wrap { white-space: normal; }
+    @else if $arg == truncate {
       white-space: nowrap;
-    }
-    @else if $arg == wrap {
-      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     @else {
       @if map-has-key($scales, $arg) {
@@ -165,17 +116,4 @@ $weights: (
       @include typography-impl($wide);
     }
   }
-}
-
-/**
- * Truncates text overflow.
- */
-
-@mixin truncate($boundary: false) {
-  @if $boundary {
-    max-width: $boundary;
-  }
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

@@ -25,35 +25,9 @@ function icon($id, $class = '', $inline = false) {
   } else
     echo '<svg class="icon '.$class.'"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-'.$id.'"></use></svg>';
 }
-
-function animatesvg($id) {
-  ?>
-  <div class="animatesvg">
-    <? include(TEMPLATEPATH.'/assets/images/'.$id.'.svg'); ?>
-  </div>
-  <?
-}
-
-
-function hexagon($size = 'normal', $fill = null, $stroke = null, $class = null) {
-	$classes = 'hexagon hexagon-size-'.$size;
-	if($fill) $classes .= ' hexagon-fill-'.$fill;
-	if($stroke) $classes .= ' hexagon-stroke-'.$stroke;
-	if($class) $classes .= ' hexagon-'.$class;
-	?>
-	<svg class="<?=  $classes ?>">
-		<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-hexagon"></use>
-	</svg>
-	<?
-}
-
 // careful with security here
 function get_view($name) {
 	include(TEMPLATEPATH.'/views/'.$name.'.php');
-}
-
-function get_quote($quoteText, $quoteStyle = '') {
-	include(TEMPLATEPATH.'/views/quote.php');
 }
 
 function modal($name) {

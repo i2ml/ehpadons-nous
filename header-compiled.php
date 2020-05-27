@@ -20,7 +20,7 @@
   <meta name="google-site-verification" content="3YROpxTdbLbvsBE4lVRXkuGrQCkiHGs5t946yjjqlXA" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=d6bdd025" rel="stylesheet" />
+  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=255eb621" rel="stylesheet" />
 
   <script>
 		var template_dir = "<?= get_stylesheet_directory_uri() ?>";
@@ -35,3 +35,5 @@
 
 <body class="loading">
 	<div class="wrapper">
+
+    <? wp_nav_menu(['theme_location' => 'primary', 'container' => false]) ?>

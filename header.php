@@ -35,3 +35,5 @@
 
 <body class="loading">
 	<div class="wrapper">
+
+    <? wp_nav_menu(['theme_location' => 'primary', 'container' => false]) ?>

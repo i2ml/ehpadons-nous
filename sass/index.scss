@@ -1,18 +1,21 @@
 
 $mq-show-breakpoints: (mobile, tablet, desktop);
 
+$baseFont: 'ralewayweb';
+$titleFont: 'adventproweb';
+
 
 @import
-    'node_modules/@glidejs/glide/src/assets/sass/glide.core',
-    'node_modules/@glidejs/glide/src/assets/sass/glide.theme',
+    // 'node_modules/@glidejs/glide/src/assets/sass/glide.core',
+    // 'node_modules/@glidejs/glide/src/assets/sass/glide.theme',
 
     'tools/colors',
     'tools/fluid',
     'tools/mq',
     'tools/typography',
+    'tools/reset',
+    'tools/fonts',
 
-    'reset',
-    'fonts',
     'base',
 
     'components/title',
@@ -20,16 +23,5 @@ $mq-show-breakpoints: (mobile, tablet, desktop);
     'components/dialog',
     // 'components/slickcarousel',
 
-    'views/contactSent',
-    'views/contact',
-    'views/references',
-    'views/intro',
-    'views/menu',
-    'views/about',
-    'views/offers',
-    'views/teambuilding',
-    'views/teambuildingDialog',
-    'views/expertDialog',
-    'views/formations',
-    'views/secondarynav'
+    'views/menu'
     ;

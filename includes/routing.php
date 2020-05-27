@@ -7,7 +7,6 @@
 add_action( 'wp_router_generate_routes', 'bl_add_routes', 20 );
 function bl_add_routes( $router ) {
 	generate_route( [ 'url' => 'contact/send' ] , $router);
-	generate_route( [ 'url' => 'map' ] , $router);
 }
 
 

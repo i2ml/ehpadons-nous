@@ -9,14 +9,151 @@ function blank_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_action( 'init', 'register_all' );
   remove_image_size('large');
+  register_nav_menu('primary', __( 'Menu principal', 'theme' ) );
 }
 
 function register_all() {
+
+  register_post_type('etablissement', array(
+  		'labels' => array(
+  		'name' => __('Établissements', 'blank'),
+  		'singular_name' => __('Établissement', 'blank'),
+  		'add_new' => __('Ajouter Nouveau', 'blank'),
+  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+  		'edit' => __('Editer item', 'blank')
+  	),
+  	'public' => true,
+  	'publicly_queryable' => true,
+  	'hierarchical' => true,
+  	'has_archive' => true,
+  	'rewrite' => ['slug' => 'etablissements'],
+  	'supports' => array(
+  		'title',
+  		'editor',
+  		'thumbnail',
+  	),
+  	'can_export' => true,
+  ));
+
+  register_post_type('artiste', array(
+  		'labels' => array(
+  		'name' => __('Artistes', 'blank'),
+  		'singular_name' => __('Artiste', 'blank'),
+  		'add_new' => __('Ajouter Nouveau', 'blank'),
+  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+  		'edit' => __('Editer item', 'blank')
+  	),
+  	'public' => true,
+    'publicly_queryable' => false,
+  	'hierarchical' => true,
+  	'has_archive' => true,
+  	'rewrite' => ['slug' => 'artistes'],
+  	'supports' => array(
+  		'title',
+  		'editor',
+  		'thumbnail',
+  	),
+  	'can_export' => true,
+  ));
+
+  register_post_type('spectacle', array(
+  		'labels' => array(
+  		'name' => __('Spectacles', 'blank'),
+  		'singular_name' => __('Spectacle', 'blank'),
+  		'add_new' => __('Ajouter Nouveau', 'blank'),
+  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+  		'edit' => __('Editer item', 'blank')
+  	),
+  	'public' => true,
+  	'publicly_queryable' => true,
+  	'hierarchical' => true,
+  	'has_archive' => true,
+  	'rewrite' => ['slug' => 'spectacles'],
+  	'supports' => array(),
+  	'can_export' => true,
+  ));
+
+  remove_post_type_support('spectacle', 'title');
+
+  register_post_type('oeuvre', array(
+  		'labels' => array(
+  		'name' => __('Oeuvres', 'blank'),
+  		'singular_name' => __('Oeuvre', 'blank'),
+  		'add_new' => __('Ajouter Nouveau', 'blank'),
+  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+  		'edit' => __('Editer item', 'blank')
+  	),
+  	'public' => true,
+  	'publicly_queryable' => true,
+  	'hierarchical' => true,
+  	'has_archive' => true,
+  	'rewrite' => ['slug' => 'oeuvres'],
+  	'supports' => array(
+  		'title',
+  		'thumbnail',
+  	),
+  	'can_export' => true,
+  ));
+
+  register_post_type('capsule', array(
+  		'labels' => array(
+  		'name' => __('Capsules', 'blank'),
+  		'singular_name' => __('Capsule', 'blank'),
+  		'add_new' => __('Ajouter Nouveau', 'blank'),
+  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+  		'edit' => __('Editer item', 'blank')
+  	),
+  	'public' => true,
+  	'publicly_queryable' => true,
+  	'hierarchical' => true,
+  	'has_archive' => true,
+  	'rewrite' => ['slug' => 'capsules'],
+  	'supports' => array(
+  		'title',
+  		'editor',
+  		'thumbnail',
+  	),
+  	'can_export' => true,
+  ));
+
 }
+
+add_filter( 'generate_show_title','tu_gig_remove_title' );
+function blank_gig_remove_title( $title ) {
+  if(is_singular('spectacle')) {
+    return false;
+  }
+  return $title;
+}
+
+
+/* change admin title */
+/* --------------------------------------------------------------------------------- */
+
+
+add_action('acf/save_post', function($post_id) {
+  global $post, $wpdb;
+  if($post->post_type != 'spectacle') return;
+  $new_title = get_field('artiste', $post_id)->post_title.' - Le '
+    .get_field('date', $post_id).', '.get_field('time', $post_id)
+    . " - dans l'EHPAD : " . get_field('etablissement', $post_id)->post_title;
+  $wpdb->update($wpdb->posts, array('post_title' => $new_title), ['ID' => $post_id]);
+});
+
+
+
+/* menu */
+/* --------------------------------------------------------------------------------- */
 
 add_shortcode('menu', function($atts, $content = null) {
     extract(shortcode_atts(array( 'name' => null, ), $atts));
-    return wp_nav_menu( array( 'theme_location' => $name, 'container' => false, 'menu_class' => 'pageDefault-menu', 'echo' => false ) );
+    return wp_nav_menu(
+      array(
+        'theme_location' => $name,
+        'container' => false,
+        'menu_class' => 'pageDefault-menu',
+        'echo' => false )
+      );
 });
 
 add_filter('intermediate_image_sizes_advanced', function($sizes) {
@@ -37,5 +174,5 @@ add_filter('wp_mail_from', function($content_type) {
 });
 
 add_filter('wp_mail_from_name', function($name) {
-  return 'CortexWorld';
+  return get_option( 'site_title' );
 });
