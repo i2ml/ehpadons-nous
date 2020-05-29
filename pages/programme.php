@@ -8,7 +8,7 @@ global $post;
 get_header('compiled');
 
 ?>
-<div class="page page__programme">
+<div class="page-container page__programme">
 
   <? get_view('page-intro') ?>
 

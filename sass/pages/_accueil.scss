@@ -9,10 +9,30 @@
 
   &-intro {
     position: relative;
-    pointer-events: none;
     background: color(yellow);
     padding: 20px 0 40px 0;
-    margin: -110px 0 40px 0;
+    overflow: hidden;
+
+    &:before, &:after {
+      content: ''; display: block;
+      position: absolute;
+    }
+
+    &:before {
+      background: color(pink);
+      top: 0; left: 0;
+      width: 100%;
+      height: 120px;
+      transform: rotate(2deg) translate(0,-20px) scale(1.1);
+    }
+
+    &:after {
+      background: color(green);
+      bottom: 0; left: 0;
+      width: 300px; height: 100px;
+      transform: rotate(45deg) translate(-50%, 0);
+      transform-origin: bottom left;
+    }
 
     .inner {
       display: flex;
@@ -20,9 +40,10 @@
     }
 
     &-logo {
-      width: 40%;
-      flex-shrink: 1;
-      // transform: translate(-20px, -40px);
+      position: relative;
+      z-index: 1;
+      width: 420px;
+      flex-shrink: 0;
     }
     &-main {
       padding-left: 40px;
@@ -31,10 +52,15 @@
     }
     &-description {
       @include typo(large);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     &-date {
       @include typo(xlarge);
+      margin-bottom: 20px;
+    }
+    &-cta {
+      @extend .button-pink;
+      margin-bottom: 20px;
     }
   }
 
@@ -45,87 +71,12 @@
   */
 
   &-apropos {
-    margin-bottom: 40px;
+    background: white;
+    padding: 80px 0;
 
     &-description {
       @extend .wysiwyg;
       @include typo(large);
-    }
-  }
-
-
-  /*
-
-  INFO
-
-  */
-
-  &-info {
-    margin-bottom: 40px;
-
-    .inner {
-      width: 1400px;
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-  }
-
-  &-conferences, &-exposition {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-
-    &-title {
-      font-family: $titleFont;
-      @include typo(xxlarge uppercase pink);
-      margin-bottom: 10px;
-    }
-    &-content {
-      padding: 20px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    &-description {
-      flex-grow: 1;
-      margin-bottom: 20px;
-    }
-    &-more {
-      align-self: flex-end;
-    }
-  }
-
-  &-conferences {
-
-    &-content {
-      background: color(pink);
-    }
-    &-description {
-      @include typo(lighter);
-    }
-    &-list {
-      display: flex;
-      justify-content: center;
-    }
-    &-more {
-      @extend .button-green;
-    }
-  }
-
-  &-exposition {
-
-    &-title {
-      color: color(green);
-    }
-    &-content {
-      background: color(green);
-    }
-    &-description {
-      @include typo(lighter xlarge);
-    }
-    &-more {
-      @extend .button-yellow;
     }
   }
 
@@ -137,8 +88,9 @@
   */
 
   &-programme {
-    padding-top: 40px;
-    padding-bottom: 80px;
+    background: color(light);
+    padding: 40px 0 80px 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,6 +106,91 @@
     }
     &-more {
       @extend .button-yellow;
+    }
+  }
+
+
+  /*
+
+  INFO
+
+  */
+
+  &-info {
+    background: white;
+    padding: 60px 0 140px 0;
+
+    .inner {
+      width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  &-conferences, &-exposition {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-title {
+      font-family: $titleFont;
+      @include typo(xxlarge uppercase pink);
+      margin-bottom: 10px;
+    }
+    &-box {
+      padding: 40px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    &-more {
+      position: absolute;
+      bottom: 0; right: 0;
+      transform: translate(-20px, 50%);
+      @extend .button-yellow;
+    }
+  }
+
+  &-conferences {
+    &-box {
+      background: color(pink);
+    }
+    &-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-list {
+      display: flex;
+      justify-content: space-around;
+    }
+    &-more {
+      &:after {
+        background: color(green);
+      }
+    }
+  }
+
+  &-exposition {
+
+    &-title {
+      color: color(green);
+    }
+    &-box {
+      background: color(green);
+    }
+    &-description {
+      flex-grow: 1;
+      margin-bottom: 20px;
+      @include typo(lighter xlarge);
+    }
+    &-more {
+      &:before {
+        background: color(green);
+      }
     }
   }
 

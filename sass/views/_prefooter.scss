@@ -1,19 +1,48 @@
 .prefooter {
+  position: relative;
+
+  &:before, &:after {
+    content: ''; display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+  }
+
+  &:before {
+    transform: rotate(-4deg) translate(50px, -30px);
+    background: color(green);
+    height: 200px;
+  }
+
+  &:after {
+    transform: rotate(3deg) translate(-20px, -20px);
+    background: color(pink);
+    height: 100px;
+  }
+
+
+  &-container {
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 60px 0;
+  }
+
   .inner {}
 
-  &-title {}
+  &-title {
+    font-family: $titleFont;
+    @include typo(center xxlarge uppercase);
+    margin-bottom: 40px;
+  }
 
   &-logos {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
   &-logo {
-
-    img {
-      max-height: 100px;
-    }
   }
 
 }

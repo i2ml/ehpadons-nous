@@ -8,8 +8,8 @@ global $post;
 get_header('compiled');
 
 ?>
-<div class="page__exposition">
-
+<div class="page-container page__exposition">
+  <? get_view('page-intro') ?>
 </div>
 <?
 

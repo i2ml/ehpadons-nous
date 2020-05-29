@@ -25,10 +25,10 @@
   &:after { height: calc(100% + #{$borderWidth}); width: $borderWidth; }
 
   &:hover {
-    transform: translate($borderWidth, $borderWidth);
+    // transform: translate($borderWidth, $borderWidth);
 
     &:before, &:after {
-      transform: translate($borderWidth, $borderWidth);
+      // transform: translate($borderWidth, $borderWidth);
     }
   }
 
@@ -40,23 +40,37 @@
     &:before, &:after { background: color(pink); }
 
     &:hover {
-      background: transparent;
-      border-color: color(pink);
-      color: color(pink);
+      // background: transparent;
+      // border-color: color(pink);
+      // color: color(pink);
+    }
+  }
+
+  &-pink {
+    @extend .button;
+    background: color(pink);
+    border-color: color(pink);
+    color: color(lighter);
+    &:before, &:after { background: color(green); }
+
+    &:hover {
+      // background: transparent;
+      // border-color: color(pink);
+      // color: color(pink);
     }
   }
 
   &-green {
     @extend .button;
-    background: color(yellow);
-    border-color: color(yellow);
+    background: color(green);
+    border-color: color(green);
     color: color(lighter);
-    &:before, &:after { background: color(green); }
+    &:before, &:after { background: color(pink); }
 
     &:hover {
-      background: transparent;
-      border-color: color(green);
-      color: color(green);
+      // background: transparent;
+      // border-color: color(green);
+      // color: color(green);
     }
   }
 }

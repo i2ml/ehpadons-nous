@@ -18,7 +18,7 @@ $articles = get_posts([
   'category__in' => $catIds
 ]);
 ?>
-<div class="page page__articles">
+<div class="page-container page__articles">
 
   <? get_view('page-intro') ?>
 

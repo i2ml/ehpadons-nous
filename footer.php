@@ -1,17 +1,19 @@
 
       <div class="prefooter">
-        <div class="inner">
-          <h3 class="prefooter-title">Partenaires</h3>
-          <div class="prefooter-logos">
-            <?
-            foreach(get_field('partners', 'options') as $partner):
-              ?>
-              <a href="<?= $partner['url'] ?>">
-                <img src="<?= $partner['logo'] ?>">
-              </a>
+        <div class="prefooter-container">
+          <div class="inner">
+            <h3 class="prefooter-title">Les partenaires du festival</h3>
+            <div class="prefooter-logos">
               <?
-            endforeach;
-            ?>
+              foreach(get_field('partners', 'options') as $partner):
+                ?>
+                <a href="<?= $partner['url'] ?>" target="_blank">
+                  <img src="<?= $partner['logo'] ?>">
+                </a>
+                <?
+              endforeach;
+              ?>
+            </div>
           </div>
         </div>
       </div>

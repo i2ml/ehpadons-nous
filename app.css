@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Colors map.
  */
@@ -265,7 +264,7 @@ video::-webkit-media-controls-panel {
   display: none; }
 
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-.button, .button-yellow, .page__accueil-exposition-more, .page__accueil-programme-more, .button-green, .page__accueil-conferences-more {
+.button, .button-yellow, .page__accueil-programme-more, .page__accueil-conferences-more, .page__accueil-exposition-more, .button-pink, .page__accueil-intro-cta, .button-green {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -281,7 +280,7 @@ video::-webkit-media-controls-panel {
   transition: all linear 0.1s;
   position: relative; }
   /* line 17, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button:before, .button-yellow:before, .page__accueil-exposition-more:before, .page__accueil-programme-more:before, .button-green:before, .page__accueil-conferences-more:before, .button:after, .button-yellow:after, .page__accueil-exposition-more:after, .page__accueil-programme-more:after, .button-green:after, .page__accueil-conferences-more:after {
+  .button:before, .button-yellow:before, .page__accueil-programme-more:before, .page__accueil-conferences-more:before, .page__accueil-exposition-more:before, .button-pink:before, .page__accueil-intro-cta:before, .button-green:before, .button:after, .button-yellow:after, .page__accueil-programme-more:after, .page__accueil-conferences-more:after, .page__accueil-exposition-more:after, .button-pink:after, .page__accueil-intro-cta:after, .button-green:after {
     content: '';
     display: block;
     position: absolute;
@@ -290,47 +289,39 @@ video::-webkit-media-controls-panel {
     transform: translate(8px, 8px);
     transition: all linear 0.1s; }
   /* line 24, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button:before, .button-yellow:before, .page__accueil-exposition-more:before, .page__accueil-programme-more:before, .button-green:before, .page__accueil-conferences-more:before {
+  .button:before, .button-yellow:before, .page__accueil-programme-more:before, .page__accueil-conferences-more:before, .page__accueil-exposition-more:before, .button-pink:before, .page__accueil-intro-cta:before, .button-green:before {
     width: calc(100% + 4px);
     height: 4px; }
   /* line 25, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button:after, .button-yellow:after, .page__accueil-exposition-more:after, .page__accueil-programme-more:after, .button-green:after, .page__accueil-conferences-more:after {
+  .button:after, .button-yellow:after, .page__accueil-programme-more:after, .page__accueil-conferences-more:after, .page__accueil-exposition-more:after, .button-pink:after, .page__accueil-intro-cta:after, .button-green:after {
     height: calc(100% + 4px);
     width: 4px; }
-  /* line 27, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button:hover, .button-yellow:hover, .page__accueil-exposition-more:hover, .page__accueil-programme-more:hover, .button-green:hover, .page__accueil-conferences-more:hover {
-    transform: translate(4px, 4px); }
-    /* line 30, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-    .button:hover:before, .button-yellow:hover:before, .page__accueil-exposition-more:hover:before, .page__accueil-programme-more:hover:before, .button-green:hover:before, .page__accueil-conferences-more:hover:before, .button:hover:after, .button-yellow:hover:after, .page__accueil-exposition-more:hover:after, .page__accueil-programme-more:hover:after, .button-green:hover:after, .page__accueil-conferences-more:hover:after {
-      transform: translate(4px, 4px); }
   /* line 35, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button-yellow, .page__accueil-exposition-more, .page__accueil-programme-more {
+  .button-yellow, .page__accueil-programme-more, .page__accueil-conferences-more, .page__accueil-exposition-more {
     background: #FBD041;
     border-color: #FBD041;
     color: #fff; }
     /* line 40, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-    .button-yellow:before, .page__accueil-exposition-more:before, .page__accueil-programme-more:before, .button-yellow:after, .page__accueil-exposition-more:after, .page__accueil-programme-more:after {
+    .button-yellow:before, .page__accueil-programme-more:before, .page__accueil-conferences-more:before, .page__accueil-exposition-more:before, .button-yellow:after, .page__accueil-programme-more:after, .page__accueil-conferences-more:after, .page__accueil-exposition-more:after {
       background: #EE3464; }
-    /* line 42, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-    .button-yellow:hover, .page__accueil-exposition-more:hover, .page__accueil-programme-more:hover {
-      background: transparent;
-      border-color: #EE3464;
-      color: #EE3464; }
   /* line 49, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-  .button-green, .page__accueil-conferences-more {
-    background: #FBD041;
-    border-color: #FBD041;
+  .button-pink, .page__accueil-intro-cta {
+    background: #EE3464;
+    border-color: #EE3464;
     color: #fff; }
     /* line 54, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-    .button-green:before, .page__accueil-conferences-more:before, .button-green:after, .page__accueil-conferences-more:after {
+    .button-pink:before, .page__accueil-intro-cta:before, .button-pink:after, .page__accueil-intro-cta:after {
       background: #79DAC1; }
-    /* line 56, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
-    .button-green:hover, .page__accueil-conferences-more:hover {
-      background: transparent;
-      border-color: #79DAC1;
-      color: #79DAC1; }
+  /* line 63, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
+  .button-green {
+    background: #79DAC1;
+    border-color: #79DAC1;
+    color: #fff; }
+    /* line 68, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
+    .button-green:before, .button-green:after {
+      background: #EE3464; }
 
-/* line 65, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
+/* line 79, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_button.scss */
 button {
   font-family: "ralewayweb";
   outline: 0 none; }
@@ -469,55 +460,105 @@ button {
   */
   /*
 
-  INFO
+  PROGRAMME
 
   */
   /*
 
-  PROGRAMME
+  INFO
 
   */ }
   /* line 10, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-intro {
     position: relative;
-    pointer-events: none;
     background: #FBD041;
     padding: 20px 0 40px 0;
-    margin: -110px 0 40px 0; }
-    /* line 17, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    overflow: hidden; }
+    /* line 16, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-intro:before, .page__accueil-intro:after {
+      content: '';
+      display: block;
+      position: absolute; }
+    /* line 21, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-intro:before {
+      background: #EE3464;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      transform: rotate(2deg) translate(0, -20px) scale(1.1); }
+    /* line 29, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-intro:after {
+      background: #79DAC1;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      height: 100px;
+      transform: rotate(45deg) translate(-50%, 0);
+      transform-origin: bottom left; }
+    /* line 37, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-intro .inner, .page__accueil-intro [class$="-inner"], .page__accueil-intro .page__accueil-programme-list, .page__accueil-intro .page__programme-list {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-align: end;
           align-items: flex-end; }
-    /* line 22, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    /* line 42, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-intro-logo {
-      width: 40%;
-      -ms-flex-negative: 1;
-          flex-shrink: 1; }
-    /* line 27, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+      position: relative;
+      z-index: 1;
+      width: 420px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+    /* line 48, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-intro-main {
       padding-left: 40px;
       -ms-flex-positive: 2;
           flex-grow: 2;
       text-align: right; }
-    /* line 32, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    /* line 53, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-intro-description {
       font-size: 22px;
-      margin-bottom: 20px; }
-    /* line 36, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+      margin-bottom: 10px; }
+    /* line 57, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-intro-date {
-      font-size: 28px; }
-  /* line 47, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+      font-size: 28px;
+      margin-bottom: 20px; }
+    /* line 61, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-intro-cta {
+      margin-bottom: 20px; }
+  /* line 73, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-apropos {
-    margin-bottom: 40px; }
-    /* line 50, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    background: white;
+    padding: 80px 0; }
+    /* line 77, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-apropos-description {
       font-size: 22px; }
-  /* line 63, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  /* line 90, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-programme {
+    background: #E6E6E6;
+    padding: 40px 0 80px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center; }
+    /* line 98, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-programme-title {
+      font-family: "adventproweb";
+      font-weight: 300;
+      font-size: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+    /* line 103, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-programme-list {
+      margin-bottom: 10px; }
+  /* line 119, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-info {
-    margin-bottom: 40px; }
-    /* line 66, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    background: white;
+    padding: 60px 0 140px 0; }
+    /* line 123, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-info .inner, .page__accueil-info [class$="-inner"], .page__accueil-info .page__accueil-programme-list, .page__accueil-info .page__programme-list {
       width: 1400px;
       display: -ms-flexbox;
@@ -526,98 +567,89 @@ button {
           justify-content: space-between;
       -ms-flex-align: stretch;
           align-items: stretch; }
-  /* line 74, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  /* line 131, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-conferences, .page__accueil-exposition {
     width: 48%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
-        flex-direction: column; }
-    /* line 79, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+        flex-direction: column;
+    position: relative; }
+    /* line 137, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-conferences-title, .page__accueil-exposition-title {
       font-family: "adventproweb";
       font-size: 50px;
       text-transform: uppercase;
       color: #EE3464;
       margin-bottom: 10px; }
-    /* line 84, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-    .page__accueil-conferences-content, .page__accueil-exposition-content {
-      padding: 20px;
+    /* line 142, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    .page__accueil-conferences-box, .page__accueil-exposition-box {
+      padding: 40px 20px;
       -ms-flex-positive: 1;
           flex-grow: 1;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
           flex-direction: column; }
-    /* line 90, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-    .page__accueil-conferences-description, .page__accueil-exposition-description {
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-      margin-bottom: 20px; }
-    /* line 94, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    /* line 148, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
     .page__accueil-conferences-more, .page__accueil-exposition-more {
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
-  /* line 101, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-  .page__accueil-conferences-content {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(-20px, 50%); }
+  /* line 157, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-conferences-box {
     background: #EE3464; }
-  /* line 104, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-  .page__accueil-conferences-description {
-    color: #fff; }
-  /* line 107, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  /* line 160, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-conferences-content {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  /* line 166, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-conferences-list {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center; }
-  /* line 118, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  /* line 171, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-conferences-more:after {
+    background: #79DAC1; }
+  /* line 179, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-exposition-title {
     color: #79DAC1; }
-  /* line 121, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-  .page__accueil-exposition-content {
+  /* line 182, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-exposition-box {
     background: #79DAC1; }
-  /* line 124, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  /* line 185, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
   .page__accueil-exposition-description {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    margin-bottom: 20px;
     color: #fff;
     font-size: 28px; }
-  /* line 139, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-  .page__accueil-programme {
-    padding-top: 40px;
-    padding-bottom: 80px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -ms-flex-align: center;
-        align-items: center; }
-    /* line 146, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-    .page__accueil-programme-title {
-      font-family: "adventproweb";
-      font-weight: 300;
-      font-size: 50px;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 40px; }
-    /* line 151, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
-    .page__accueil-programme-list {
-      margin-bottom: 10px; }
+  /* line 191, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_accueil.scss */
+  .page__accueil-exposition-more:before {
+    background: #79DAC1; }
 
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_programme.scss */
 .page__programme {
-  padding-bottom: 40px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center; }
-  /* line 7, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_programme.scss */
+  /* line 6, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_programme.scss */
   .page__programme-list {
     margin-bottom: 40px; }
 
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_articles.scss */
 .page__articles {
-  padding-top: 100px;
   padding-bottom: 40px;
   display: -ms-flexbox;
   display: flex;
@@ -625,7 +657,7 @@ button {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center; }
-  /* line 8, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_articles.scss */
+  /* line 7, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_articles.scss */
   .page__articles-list {
     display: -ms-flexbox;
     display: flex;
@@ -634,10 +666,15 @@ button {
     -ms-flex-pack: center;
         justify-content: center; }
 
-/* line 2, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
+/* line 3, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
+.page-container {
+  min-height: 50vh;
+  padding: 0 0 100px 0; }
+
+/* line 8, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
 .page-intro {
   padding: 40px 0; }
-  /* line 5, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
+  /* line 11, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
   .page-intro-title {
     font-family: "adventproweb";
     font-weight: 300;
@@ -645,7 +682,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 40px; }
-  /* line 11, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
+  /* line 17, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/pages/_page.scss */
   .page-intro-introduction {
     text-align: center;
     font-weight: 300;
@@ -783,60 +820,105 @@ button {
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
 .header {
   padding: 20px 0;
-  position: relative;
-  z-index: 1; }
-  /* line 10, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+  position: relative; }
+  /* line 5, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+  .header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #EE3464;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    transform: rotate(2deg) translate(0, -20px) scale(1.1); }
+  /* line 15, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+  body.home .header {
+    position: absolute;
+    z-index: 1;
+    width: 100%; }
+  /* line 21, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
   .header .inner, .header [class$="-inner"], .header .page__accueil-programme-list, .header .page__programme-list {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
-  /* line 15, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  /* line 27, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
   .header-logo {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%); }
-    /* line 20, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
-    body.home .header-logo {
-      display: none; }
-    /* line 24, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+    transform: scale(1.5) translate(0, 10px); }
+    /* line 31, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
     .header-logo img {
       width: 100px; }
+      /* line 33, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_header.scss */
+      body.home .header-logo img {
+        visibility: hidden; }
 
-/* line 6, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
-.prefooter-logos {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+/* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
+.footer {
+  background: #FBD041;
+  padding: 40px 0; }
 
-/* line 14, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
-.prefooter-logo img  {
-  max-height: 100px; }
+/* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+.prefooter {
+  position: relative; }
+  /* line 4, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter:before, .prefooter:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+  /* line 11, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter:before {
+    transform: rotate(-4deg) translate(50px, -30px);
+    background: #79DAC1;
+    height: 200px; }
+  /* line 17, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter:after {
+    transform: rotate(3deg) translate(-20px, -20px);
+    background: #EE3464;
+    height: 100px; }
+  /* line 24, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter-container {
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 60px 0; }
+  /* line 33, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter-title {
+    font-family: "adventproweb";
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+  /* line 39, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  .prefooter-logos {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-align: center;
+        align-items: center; }
 
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
 .menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
-      justify-content: flex-end;
-  padding: 40px 0 0 0; }
+      justify-content: flex-end; }
   /* line 6, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
   .menu-item {
     margin-left: 20px;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
-    white-space: nowrap; }
-    /* line 13, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
-    body.home .menu-item {
-      color: white; }
-    /* line 17, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
+    white-space: nowrap;
+    color: #fff; }
+    /* line 12, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
     .menu-item:hover {
-      border-bottom-color: #483f40; }
-    /* line 20, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
+      border-bottom-color: #fff; }
+    /* line 15, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/views/_menu.scss */
     .menu-item.current-menu-item {
-      color: #EE3464;
-      border-bottom-color: #EE3464; }
+      border-bottom-color: #fff; }

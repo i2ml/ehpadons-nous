@@ -1,25 +1,19 @@
 .menu {
   display: flex;
   justify-content: flex-end;
-  padding: 40px 0 0 0;
+  // padding: 40px 0 0 0;
 
   &-item {
     margin-left: 20px;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
-
-    @include typo(nowrap);
-
-    body.home & {
-      color: white;
-    }
+    @include typo(nowrap lighter);
 
     &:hover {
-      border-bottom-color: color(dark);
+      border-bottom-color: color(lighter);
     }
     &.current-menu-item {
-      color: color(pink);
-      border-bottom-color: color(pink);
+      border-bottom-color: color(lighter);
     }
   }
 }
