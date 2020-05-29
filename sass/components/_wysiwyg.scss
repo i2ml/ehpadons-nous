@@ -1,0 +1,11 @@
+.wysiwyg {
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  a {
+    @include typo(pink underline);
+  }
+
+}

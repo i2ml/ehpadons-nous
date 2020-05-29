@@ -1,0 +1,44 @@
+.articlePreview {
+  background: white;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  @include shadow();
+
+  width: 220px;
+  margin: 0 10px 20px 10px;
+
+  &-aside {
+    flex-shrink: 0;
+    position: relative;
+    // height: 200px;
+    // overflow: hidden;
+
+    @include mobile() {
+      display: none !important;
+    }
+  }
+  &-visual {
+    display: block;
+    // position: absolute;
+    // top: 50%; left: 50%;
+    // transform: translate(-50%, -50%);
+  }
+
+  &-main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  &-date {
+    @include typo(italic tiny semilight);
+  }
+  &-title {
+    @include typo();
+  }
+  &-description {
+    margin-bottom: 5px;
+  }
+}

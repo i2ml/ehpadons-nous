@@ -20,7 +20,7 @@
   <meta name="google-site-verification" content="3YROpxTdbLbvsBE4lVRXkuGrQCkiHGs5t946yjjqlXA" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=255eb621" rel="stylesheet" />
+  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=14a4f636" rel="stylesheet" />
 
   <script>
 		var template_dir = "<?= get_stylesheet_directory_uri() ?>";
@@ -33,7 +33,14 @@
 
 </head>
 
-<body class="loading">
+<body <? body_class() ?>>
 	<div class="wrapper">
 
-    <? wp_nav_menu(['theme_location' => 'primary', 'container' => false]) ?>
+    <header class="header">
+      <div class="inner">
+        <a class="header-logo" href="/">
+          <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo-full-export.png" alt="">
+        </a>
+        <? wp_nav_menu(['theme_location' => 'primary', 'container' => false]) ?>
+      </div>
+    </header>

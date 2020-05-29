@@ -1,16 +1,8 @@
-$font-sizes: (
-	small: 3.4vw,
-	mobile: 3.4vw,
-	tablet: 1vw,
-	desktop: .972vw,
-	wide: 14px
-);
-
 html {
 
 	// fonts setup
 	font-family: $baseFont;
-	@include typo(regular normal purple);
+	@include typo(regular normal dark);
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
 	@include mq($from: tablet) { text-rendering: geometricPrecision; } // http://css-tricks.com/almanac/properties/t/text-rendering/
@@ -55,7 +47,7 @@ img {
 	@extend .inner;
 }
 
-#wpadminbar { display: none; }
+// #wpadminbar { display: none; }
 
 // rm chrome video download button
 video::-internal-media-controls-download-button { display:none; }
@@ -73,9 +65,14 @@ video::-webkit-media-controls-panel { width: calc(100% + 30px); }
 }
 
 @mixin shadow() {
-	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 @mixin textShadow() {
 	text-shadow: 1px 1px 2px color(dark);
+}
+
+@mixin square($size) {
+	width: $size;
+	height: $size;
 }

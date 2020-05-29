@@ -1,0 +1,68 @@
+.button {
+  $borderWidth: 4px;
+	display: inline-flex;
+	align-items: center;
+	height: 50px;
+	padding: 0 20px;
+	border: $borderWidth solid;
+
+	@include typo(nowrap uppercase large);
+	text-decoration: none;
+
+	cursor: pointer;
+	transition: all linear 0.1s;
+
+  position: relative;
+
+  &:before, &:after {
+    content: ''; display: block;
+    position: absolute;
+    bottom: 0; right: 0;
+    transform: translate($borderWidth*2, $borderWidth*2);
+    transition: all linear 0.1s;
+  }
+  &:before { width: calc(100% + #{$borderWidth}); height: $borderWidth; }
+  &:after { height: calc(100% + #{$borderWidth}); width: $borderWidth; }
+
+  &:hover {
+    transform: translate($borderWidth, $borderWidth);
+
+    &:before, &:after {
+      transform: translate($borderWidth, $borderWidth);
+    }
+  }
+
+  &-yellow {
+    @extend .button;
+    background: color(yellow);
+    border-color: color(yellow);
+    color: color(lighter);
+    &:before, &:after { background: color(pink); }
+
+    &:hover {
+      background: transparent;
+      border-color: color(pink);
+      color: color(pink);
+    }
+  }
+
+  &-green {
+    @extend .button;
+    background: color(yellow);
+    border-color: color(yellow);
+    color: color(lighter);
+    &:before, &:after { background: color(green); }
+
+    &:hover {
+      background: transparent;
+      border-color: color(green);
+      color: color(green);
+    }
+  }
+}
+
+
+button {
+	font-family: $baseFont;
+	outline: 0 none;
+}

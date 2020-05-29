@@ -1,0 +1,19 @@
+.prefooter {
+  .inner {}
+
+  &-title {}
+
+  &-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-logo {
+
+    img {
+      max-height: 100px;
+    }
+  }
+
+}

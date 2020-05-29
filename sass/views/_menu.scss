@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 0 0 0;
+
+  &-item {
+    margin-left: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+
+    @include typo(nowrap);
+
+    body.home & {
+      color: white;
+    }
+
+    &:hover {
+      border-bottom-color: color(dark);
+    }
+    &.current-menu-item {
+      color: color(pink);
+      border-bottom-color: color(pink);
+    }
+  }
+}

@@ -1,3 +1,160 @@
-.pageAccueil {
-  
+.page__accueil {
+
+
+  /*
+
+  INTRO
+
+  */
+
+  &-intro {
+    position: relative;
+    pointer-events: none;
+    background: color(yellow);
+    padding: 20px 0 40px 0;
+    margin: -110px 0 40px 0;
+
+    .inner {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-logo {
+      width: 40%;
+      flex-shrink: 1;
+      // transform: translate(-20px, -40px);
+    }
+    &-main {
+      padding-left: 40px;
+      flex-grow: 2;
+      @include typo(right);
+    }
+    &-description {
+      @include typo(large);
+      margin-bottom: 20px;
+    }
+    &-date {
+      @include typo(xlarge);
+    }
+  }
+
+  /*
+
+  APROPOS
+
+  */
+
+  &-apropos {
+    margin-bottom: 40px;
+
+    &-description {
+      @extend .wysiwyg;
+      @include typo(large);
+    }
+  }
+
+
+  /*
+
+  INFO
+
+  */
+
+  &-info {
+    margin-bottom: 40px;
+
+    .inner {
+      width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  &-conferences, &-exposition {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-family: $titleFont;
+      @include typo(xxlarge uppercase pink);
+      margin-bottom: 10px;
+    }
+    &-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    &-description {
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+    &-more {
+      align-self: flex-end;
+    }
+  }
+
+  &-conferences {
+
+    &-content {
+      background: color(pink);
+    }
+    &-description {
+      @include typo(lighter);
+    }
+    &-list {
+      display: flex;
+      justify-content: center;
+    }
+    &-more {
+      @extend .button-green;
+    }
+  }
+
+  &-exposition {
+
+    &-title {
+      color: color(green);
+    }
+    &-content {
+      background: color(green);
+    }
+    &-description {
+      @include typo(lighter xlarge);
+    }
+    &-more {
+      @extend .button-yellow;
+    }
+  }
+
+
+  /*
+
+  PROGRAMME
+
+  */
+
+  &-programme {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-family: $titleFont;
+      @include typo(thin xxlarge center uppercase);
+      margin-bottom: 40px;
+    }
+    &-list {
+      @extend .inner;
+      margin-bottom: 10px;
+    }
+    &-more {
+      @extend .button-yellow;
+    }
+  }
+
 }

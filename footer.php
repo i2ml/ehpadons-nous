@@ -1,4 +1,27 @@
-			</main>
+
+      <div class="prefooter">
+        <div class="inner">
+          <h3 class="prefooter-title">Partenaires</h3>
+          <div class="prefooter-logos">
+            <?
+            foreach(get_field('partners', 'options') as $partner):
+              ?>
+              <a href="<?= $partner['url'] ?>">
+                <img src="<?= $partner['logo'] ?>">
+              </a>
+              <?
+            endforeach;
+            ?>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="inner">
+
+        </div>
+      </footer>
+
 		</div><!-- .wrapper -->
 
 		<div class="dialog" id="dialog">

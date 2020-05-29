@@ -1,0 +1,30 @@
+.header {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+
+  body.home & {
+    // background: color(yellow);
+  }
+
+  .inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+
+    body.home & {
+      display: none;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .menu {}
+}

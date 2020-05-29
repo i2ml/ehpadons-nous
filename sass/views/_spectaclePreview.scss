@@ -1,0 +1,73 @@
+.spectaclePreview {
+  background: white;
+  margin-bottom: 20px;
+  display: flex;
+  @include shadow();
+
+  &-aside {
+    flex-shrink: 0;
+    position: relative;
+    @include square(160px);
+
+    @include mobile() {
+      display: none !important;
+    }
+  }
+  &-date {
+    position: absolute;
+    top: 0; left: 0;
+    transform: translate(-10px, -10px);
+    background: white;
+    padding: 5px;
+  }
+  &-visual {
+    display: block;
+  }
+
+  &-main {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  &-artiste {
+
+    &-name {
+      @include typo(large);
+    }
+    &-discipline {
+      @include typo(normal semilight);
+    }
+  }
+  &-description {
+    margin-bottom: 5px;
+  }
+  &-etablissement {
+    @include typo(thin);
+  }
+  &-metas {
+  }
+  &-meta {
+    display: inline-flex;
+    align-items: center;
+    @include typo(semilight small);
+    margin-right: 5px;
+
+    .icon {
+      fill: color(semilight);
+      @include square(15px);
+      margin-right: 5px;
+    }
+  }
+  &-link {
+    position: absolute;
+    bottom: 0; right: 0;
+    @include square(30px);
+    background: color(pink);
+    @include typo(thin xxlarge lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

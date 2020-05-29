@@ -8,7 +8,7 @@ global $post;
 get_header('compiled');
 
 ?>
-<div class="pageApropos">
+<div class="page__apropos">
 
 </div>
 <?

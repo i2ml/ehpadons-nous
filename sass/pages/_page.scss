@@ -1,0 +1,20 @@
+.page {
+  &-intro {
+    padding: 40px 0;
+
+    &-title {
+      font-family: $titleFont;
+      @include typo(thin xxlarge center uppercase);
+      margin-bottom: 40px;
+    }
+
+    &-introduction {
+      @extend .wysiwyg;
+
+      @include typo(center thin large);
+
+      width: 800px;
+      margin: 0 auto;
+    }
+  }
+}

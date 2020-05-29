@@ -1,7 +1,4 @@
 <?
-use \Blank\Content;
-
-
 
 /**
  * User roles
@@ -17,8 +14,8 @@ remove_role( 'contributor' );
  */
 
 add_action( 'admin_menu', function() {
-	remove_menu_page('edit.php');
-	remove_menu_page( 'edit-comments.php' );
+	// remove_menu_page('edit.php');
+	// remove_menu_page( 'edit-comments.php' );
 });
 
 add_filter('acf/options_page/settings', function($acf_options_page_settings) {

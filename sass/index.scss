@@ -18,10 +18,24 @@ $titleFont: 'adventproweb';
 
     'base',
 
-    'components/title',
+    'components/button',
     'components/glide',
     'components/dialog',
+    'components/wysiwyg',
     // 'components/slickcarousel',
 
+    'pages/accueil',
+    'pages/programme',
+    'pages/apropos',
+    'pages/exposition',
+    'pages/articles',
+    'pages/article',
+    'pages/page',
+
+    'views/articlePreview',
+    'views/spectaclePreview',
+    'views/header',
+    'views/footer',
+    'views/prefooter',
     'views/menu'
     ;

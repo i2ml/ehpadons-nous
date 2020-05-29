@@ -7,7 +7,7 @@ $scales: (
   small: 16px,   /* 14 */
   normal: 18px,  /* 16, default */
   large: 22px,   /* 18 */
-  xlarge: 35px,  /* 22 */
+  xlarge: 28px,  /* 22 */
   xxlarge: 50px  /* 36 */
 );
 
@@ -22,13 +22,6 @@ $scales: (
 
   @return map-get($scales, $name);
 }
-
-%scale-tiny    { font-size: fontscale(tiny);    }
-%scale-small   { font-size: fontscale(small);   }
-%scale-normal  { font-size: fontscale(normal);  }
-%scale-large   { font-size: fontscale(large);   }
-%scale-xlarge  { font-size: fontscale(xlarge);  }
-%scale-xxlarge { font-size: fontscale(xxlarge); }
 
 /**
  * Weights

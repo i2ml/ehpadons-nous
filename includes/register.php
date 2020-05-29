@@ -1,15 +1,32 @@
 <?php
 
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Footer'),
+            'menu_title'    => __('Footer'),
+            'menu_slug'     => 'footer-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}
+
 /*
  * Main theme setup
  */
 
-add_action( 'after_setup_theme', 'blank_theme_setup' );
+add_action('after_setup_theme', 'blank_theme_setup');
 function blank_theme_setup() {
-	add_theme_support( 'post-thumbnails' );
-	add_action( 'init', 'register_all' );
+	add_theme_support('post-thumbnails');
+	add_action('init', 'register_all');
   remove_image_size('large');
-  register_nav_menu('primary', __( 'Menu principal', 'theme' ) );
+  register_nav_menu('primary', __('Menu principal', 'theme'));
 }
 
 function register_all() {
@@ -134,9 +151,7 @@ function blank_gig_remove_title( $title ) {
 add_action('acf/save_post', function($post_id) {
   global $post, $wpdb;
   if($post->post_type != 'spectacle') return;
-  $new_title = get_field('artiste', $post_id)->post_title.' - Le '
-    .get_field('date', $post_id).', '.get_field('time', $post_id)
-    . " - dans l'EHPAD : " . get_field('etablissement', $post_id)->post_title;
+  $new_title = 'Le '.get_field('date', $post_id).' à '.get_field('time', $post_id);
   $wpdb->update($wpdb->posts, array('post_title' => $new_title), ['ID' => $post_id]);
 });
 

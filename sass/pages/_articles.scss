@@ -1,0 +1,13 @@
+.page__articles {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,6 +1,7 @@
 require('./datahref');
 require('./mq-src');
 require('./dialog');
+const $clamp = require('clamp-js');
 var Media = require('./media');
 
 $(document).ready(function($) {
@@ -33,6 +34,10 @@ $(document).ready(function($) {
           scrollTop: target.offset().top - 150
       }, 1000);
     }
+  });
+
+  $('[data-clamp]').each((key,elem) => {
+    $clamp(elem, {clamp: $(elem).attr('data-clamp')});
   });
 
 
