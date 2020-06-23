@@ -16,7 +16,7 @@ get_header('compiled');
     <?
     $spectacles = get_posts([
       'post_type'     => 'spectacle',
-      'post_per_page' => 3,
+      'posts_per_page' => -1,
     	'orderby'			  => 'menu_order',
     	'order'				  => 'ASC'
     ]);

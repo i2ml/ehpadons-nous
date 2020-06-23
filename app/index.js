@@ -40,5 +40,16 @@ $(document).ready(function($) {
     $clamp(elem, {clamp: $(elem).attr('data-clamp')});
   });
 
+  $('[data-mobilenav="toggle"]').click((e) => {
+    e.preventDefault();
+    if($('body').hasClass('has-mobilenav')) {
+      $('html').css('overflow-y', 'initial');
+    } else {
+      $('html').css('overflow-y', 'hidden');
+    }
+    $('body').toggleClass('has-mobilenav');
+
+  })
+
 
 })

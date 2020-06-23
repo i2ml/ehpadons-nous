@@ -1,0 +1,63 @@
+.spectacleDialog {
+  background: white;
+  padding: 40px;
+
+  @include mobile() {
+    padding: 20px;
+  }
+
+  hr {
+    clear: both;
+    border: 1px solid color(light);
+    margin: 20px 0;
+  }
+
+  /*
+  ARTIST
+  */
+
+  &-artist {
+
+    &-title {
+      @include typo(center);
+      margin-bottom: 40px;
+    }
+    &-name {
+      @include typo($desktop: xxlarge thin, $mobile: large);
+    }
+    &-discipline {
+      @include typo(large semilight);
+    }
+    &-visual {
+      float: left;
+      width: 210px;
+      margin: 5px 10px 0 0;
+
+      @include mobile() {
+        display: block;
+        margin: 0 auto;
+        float: none;
+      }
+    }
+    &-description {
+      @extend .wysiwyg;
+    }
+  }
+
+
+  /*
+  INFO
+  */
+
+  &-info {
+    &-title {
+      @include typo($desktop: underline thin xlarge, $mobile: large);
+      margin-bottom: 20px;
+    }
+    &-description {
+      @include typo($desktop: large, $mobile: normal);
+      margin-bottom: 20px;
+    }
+  }
+
+}

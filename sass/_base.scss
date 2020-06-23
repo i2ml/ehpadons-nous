@@ -11,6 +11,10 @@ html {
 	position: relative;
 	min-height: 100%;
 	background-color: color(light);
+
+  @include mobile() {
+    transform: translateY(-46px);
+  }
 }
 
 body {
@@ -19,6 +23,12 @@ body {
 
 img {
 	max-width: 100%;
+}
+
+#wpadminbar {
+  @include mobile() {
+    display: none;
+  }
 }
 
 /* MAIN */
@@ -58,6 +68,10 @@ video::-webkit-media-controls-panel { width: calc(100% + 30px); }
 
 /* Common classes */
 /* --------------------------------------------------------------------------------- */
+
+.clear {
+  clear: both;
+}
 
 [hidden],
 .is-hidden {

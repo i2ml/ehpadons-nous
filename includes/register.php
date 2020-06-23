@@ -27,6 +27,7 @@ function blank_theme_setup() {
 	add_action('init', 'register_all');
   remove_image_size('large');
   register_nav_menu('primary', __('Menu principal', 'theme'));
+  register_nav_menu('footer', __('Menu footer', 'theme'));
 }
 
 function register_all() {
@@ -107,27 +108,6 @@ function register_all() {
   	'rewrite' => ['slug' => 'oeuvres'],
   	'supports' => array(
   		'title',
-  		'thumbnail',
-  	),
-  	'can_export' => true,
-  ));
-
-  register_post_type('capsule', array(
-  		'labels' => array(
-  		'name' => __('Capsules', 'blank'),
-  		'singular_name' => __('Capsule', 'blank'),
-  		'add_new' => __('Ajouter Nouveau', 'blank'),
-  		'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
-  		'edit' => __('Editer item', 'blank')
-  	),
-  	'public' => true,
-  	'publicly_queryable' => true,
-  	'hierarchical' => true,
-  	'has_archive' => true,
-  	'rewrite' => ['slug' => 'capsules'],
-  	'supports' => array(
-  		'title',
-  		'editor',
   		'thumbnail',
   	),
   	'can_export' => true,

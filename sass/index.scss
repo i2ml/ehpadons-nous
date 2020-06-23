@@ -25,17 +25,25 @@ $titleFont: 'adventproweb';
     // 'components/slickcarousel',
 
     'pages/accueil',
+    'pages/error',
+    'pages/fulldialog',
     'pages/programme',
     'pages/apropos',
     'pages/exposition',
     'pages/articles',
     'pages/article',
     'pages/page',
+    'pages/default',
+    'pages/pages',
 
     'views/articlePreview',
+    'views/etablissementPreview',
     'views/spectaclePreview',
+    'views/spectacleDialog',
+    'views/oeuvrePreview',
+    'views/oeuvreDialog',
     'views/header',
     'views/footer',
     'views/prefooter',
-    'views/menu'
+    'views/mobileNav'
     ;

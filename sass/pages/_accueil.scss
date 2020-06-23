@@ -10,8 +10,15 @@
   &-intro {
     position: relative;
     background: color(yellow);
-    padding: 20px 0 40px 0;
+    padding: 20px 0;
     overflow: hidden;
+
+    @include mobile() {
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px 0;
+    }
 
     &:before, &:after {
       content: ''; display: block;
@@ -37,6 +44,10 @@
     .inner {
       display: flex;
       align-items: flex-end;
+
+      @include mobile() {
+        flex-direction: column;
+      }
     }
 
     &-logo {
@@ -44,6 +55,15 @@
       z-index: 1;
       width: 420px;
       flex-shrink: 0;
+      transform: translate(-110px,0);
+
+      @include tablet() {
+        transform: none;
+      }
+
+      @include mobile() {
+        margin-bottom: 20px;
+      }
     }
     &-main {
       padding-left: 40px;
@@ -74,9 +94,85 @@
     background: white;
     padding: 80px 0;
 
+    .inner {
+      display: flex;
+      flex-direction: column;
+    }
+
     &-description {
       @extend .wysiwyg;
-      @include typo(large);
+      @include typo(large justify);
+      margin-bottom: 40px;
+    }
+
+    &-more {
+      @extend .button-yellow;
+      align-self: center;
+    }
+  }
+
+
+  /*
+
+  PARTNERS
+
+  */
+
+  &-partners {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &-partner {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include mobile() {
+      width: 100%;
+    }
+
+    > h3 {
+      @include typo(small center italic);
+      margin-bottom: 10px;
+    }
+
+    > a {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    &-card {
+      display: flex;
+      align-items: center;
+
+      img {
+        @include square(120px);
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+      &-main {
+        display: flex;
+        flex-direction: column;
+        h4 {
+          @include typo(bold large);
+        }
+        span {
+          @include typo();
+        }
+      }
     }
   }
 
@@ -105,7 +201,8 @@
       margin-bottom: 10px;
     }
     &-more {
-      @extend .button-yellow;
+      // @extend .button-yellow;
+      @extend .button-pink;
     }
   }
 
@@ -125,6 +222,10 @@
       display: flex;
       justify-content: space-between;
       align-items: stretch;
+
+      @include mobile() {
+        flex-direction: column;
+      }
     }
   }
 
@@ -133,6 +234,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include mobile() {
+      width: 100%;
+      margin-bottom: 40px;
+    }
 
     &-title {
       font-family: $titleFont;
@@ -163,9 +269,18 @@
       align-items: center;
       justify-content: center;
     }
+    &-description {
+      flex-grow: 1;
+      margin-bottom: 20px;
+      @include typo(lighter xlarge justify);
+    }
     &-list {
       display: flex;
       justify-content: space-around;
+
+      @include mobile() {
+        flex-direction: column;
+      }
     }
     &-more {
       &:after {
@@ -185,7 +300,7 @@
     &-description {
       flex-grow: 1;
       margin-bottom: 20px;
-      @include typo(lighter xlarge);
+      @include typo(lighter xlarge justify);
     }
     &-more {
       &:before {

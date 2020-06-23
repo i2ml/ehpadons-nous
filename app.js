@@ -16,6 +16,7 @@ $('body').on('click', '[data-dialog="open"]', function(e) {
   if(href.startsWith('#')) {
     openDialog($(href).html());
   } else {
+    href = href+'?dialog=1';
     $.get(href).then(openDialog);
   }
 
@@ -31,7 +32,7 @@ $(document).keyup(function(e){
 });
 
 function openDialog(html) {
-  console.log(html);
+  $('body').css('overflow-y', 'hidden');
   $dialogBody.html(html);
   $dialogContainer.addClass('visible');
 }
@@ -40,6 +41,7 @@ function closeDialog() {
   if($('.dialog-back').length) {
     return window.location = $('.dialog-back').attr('href');
   }
+  $('body').css('overflow-y', 'unset');
   $('#dialog').removeClass('visible');
 }
 
@@ -85,6 +87,17 @@ $(document).ready(function($) {
   $('[data-clamp]').each((key,elem) => {
     $clamp(elem, {clamp: $(elem).attr('data-clamp')});
   });
+
+  $('[data-mobilenav="toggle"]').click((e) => {
+    e.preventDefault();
+    if($('body').hasClass('has-mobilenav')) {
+      $('html').css('overflow-y', 'initial');
+    } else {
+      $('html').css('overflow-y', 'hidden');
+    }
+    $('body').toggleClass('has-mobilenav');
+
+  })
 
 
 })

@@ -1,11 +1,52 @@
 .wysiwyg {
 
-  p {
-    margin-bottom: 20px;
+  @include typo(large);
+  line-height: fontscale(xlarge);
+
+  @include mobile() {
+    @include typo(normal);
+    line-height: calc(#{fontscale(normal)} + 5px);
+  }
+
+  p, ul, ol {
+    margin-bottom: 40px;
+
+    @include mobile() {
+      margin-bottom: 20px;
+    }
   }
 
   a {
     @include typo(pink underline);
+  }
+
+  img {
+    height: auto;
+    
+    &.alignnone {
+      margin-bottom: 20px;
+    }
+    &.alignright {
+      float: right;
+      margin: 0 0 10px 20px;
+    }
+    &.alignleft {
+      float: left;
+      margin: 0 20px 10px 0;
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  ul {
+    margin-left: 20px;
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+    }
   }
 
 }

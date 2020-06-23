@@ -6,7 +6,7 @@
 	padding: 0 20px;
 	border: $borderWidth solid;
 
-	@include typo(nowrap uppercase large);
+	@include typo($desktop: nowrap uppercase large, $mobile: normal);
 	text-decoration: none;
 
 	cursor: pointer;

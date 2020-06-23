@@ -1,0 +1,17 @@
+.page__default {
+
+  &-inner {
+    width: 1000px;
+    padding-bottom: 100px;
+  }
+
+  &-main {
+    background: white;
+    padding: 40px;
+    @include shadow();
+  }
+
+  &-content {
+    @extend .wysiwyg;
+  }
+}

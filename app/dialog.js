@@ -11,6 +11,7 @@ $('body').on('click', '[data-dialog="open"]', function(e) {
   if(href.startsWith('#')) {
     openDialog($(href).html());
   } else {
+    href = href+'?dialog=1';
     $.get(href).then(openDialog);
   }
 
@@ -26,7 +27,7 @@ $(document).keyup(function(e){
 });
 
 function openDialog(html) {
-  console.log(html);
+  $('body').css('overflow-y', 'hidden');
   $dialogBody.html(html);
   $dialogContainer.addClass('visible');
 }
@@ -35,5 +36,6 @@ function closeDialog() {
   if($('.dialog-back').length) {
     return window.location = $('.dialog-back').attr('href');
   }
+  $('body').css('overflow-y', 'unset');
   $('#dialog').removeClass('visible');
 }

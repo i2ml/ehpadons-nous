@@ -1,0 +1,51 @@
+.page__pages {
+  padding-bottom: 200px;
+
+  .inner {
+    width: 1200px;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    @include mobile() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-item {
+    background: white;
+    @include shadow();
+    padding: 40px 20px;
+    margin: 0 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 33%;
+
+    @include mobile() {
+      width: 100%;
+    }
+
+
+    > h2 {
+      @include typo(xlarge uppercase center );
+      margin-bottom: 20px;
+    }
+
+    > main {
+      @include typo(center);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    > a {
+
+    }
+  }
+}

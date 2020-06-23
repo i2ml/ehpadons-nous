@@ -1,0 +1,25 @@
+.etablissementPreview {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &-visual {
+    @include square(70px);
+    border-radius: 100%;
+    margin-right: 20px;
+  }
+  &-name {
+    @include typo(thin large);
+  }
+  &-address {
+    display: flex;
+    align-items: center;
+    @include typo(semilight small);
+
+    .icon {
+      @include square(20px);
+      fill: color(semilight);
+      margin-right: 5px;
+    }
+  }
+}

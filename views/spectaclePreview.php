@@ -6,19 +6,19 @@ $etablissement = get_field('etablissement', $spectacle->ID);
 $visual = wp_get_attachment_image_src(get_post_thumbnail_id($artist->ID), 'thumbnail');
 $visual = $visual ? $visual[0] : get_stylesheet_directory_uri().'/assets/images/default-artist.jpg';
 ?>
-<div class="spectaclePreview">
+<a class="spectaclePreview" href="<?= get_permalink($spectacle->ID) ?>" data-dialog="open">
+
+  <div class="spectaclePreview-date">
+    <?= get_field('date', $spectacle->ID) ?>
+  </div>
 
   <aside class="spectaclePreview-aside">
-    <div class="spectaclePreview-date">
-      <?= get_field('date', $spectacle->ID) ?>
-    </div>
     <img class="spectaclePreview-visual" src="<?= $visual ?>" alt="">
   </aside>
 
   <main class="spectaclePreview-main">
     <h3 class="spectaclePreview-artiste">
       <span class="spectaclePreview-artiste-name"><?= $artist->post_title ?></span>
-
       <span class="spectaclePreview-artiste-discipline">/<?= get_field('discipline', $artist->ID) ?></span>
     </h3>
 
@@ -39,14 +39,27 @@ $visual = $visual ? $visual[0] : get_stylesheet_directory_uri().'/assets/images/
         <? icon('time') ?>
         <?= get_field('time', $spectacle->ID) ?>
       </div>
-      <div class="spectaclePreview-meta">
-        <? icon('marker') ?>
-        <?= get_field('address', $etablissement->ID) ?>
+      <?
+      if($etablissement):
+        ?>
+        <div class="spectaclePreview-meta">
+          <? icon('marker') ?>
+          <?= get_field('address', $etablissement->ID) ?>
+        </div>
+        <?
+      endif;
+      ?>
+    </div>
+
+    <div class="spectaclePreview-link">
+      <div class="spectaclePreview-link-icon">
+        +
+      </div>
+      <div class="spectaclePreview-link-text">
+        Voir la suite
       </div>
     </div>
 
-    <a class="spectaclePreview-link" href="<?= get_permalink($spectacle->ID) ?>">+</a>
-
   </main>
 
-</div>
+</a>

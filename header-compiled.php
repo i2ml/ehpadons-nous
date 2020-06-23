@@ -17,10 +17,10 @@
   <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/favicon-120x120.png">
   <link rel="apple-touch-icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/favicon-120x120.png">
 
-  <meta name="google-site-verification" content="3YROpxTdbLbvsBE4lVRXkuGrQCkiHGs5t946yjjqlXA" />
+  <meta name="google-site-verification" content="1OOkyToxjkcDc2Fxd2K2DsYDkRNx9YDZnDJCrNhLcMc" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=14a4f636" rel="stylesheet" />
+  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=2ca8188e" rel="stylesheet" />
 
   <script>
 		var template_dir = "<?= get_stylesheet_directory_uri() ?>";
@@ -41,6 +41,15 @@
         <a class="header-logo" href="/">
           <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/logo-full-export.png" alt="">
         </a>
-        <? wp_nav_menu(['theme_location' => 'primary', 'container' => false]) ?>
+        <? wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'menu_class' => 'header-menu']) ?>
+        <a href="https://www.facebook.com/EHPADONSNOUS/" target="_blank" class="header-social">
+          <? icon('facebook') ?>
+          Suivez nous !
+        </a>
+        <a class="header-mobile" href="#" data-mobilenav="toggle">
+          <? icon('menu') ?>
+        </a>
       </div>
     </header>
+
+    <? get_view('mobileNav') ?>

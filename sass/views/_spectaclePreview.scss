@@ -3,6 +3,27 @@
   margin-bottom: 20px;
   display: flex;
   @include shadow();
+  position: relative;
+
+  @include mobile() {
+    flex-direction: column;
+  }
+
+  &-date {
+    position: absolute;
+    z-index: 1;
+    top: 0; left: 0;
+    transform: translate(-10px, -10px);
+    background: white;
+    padding: 5px;
+
+    @include mobile() {
+      position: relative;
+      text-align: center;
+      transform: translate(0);
+      padding: 5px 0 0 0;
+    }
+  }
 
   &-aside {
     flex-shrink: 0;
@@ -13,23 +34,19 @@
       display: none !important;
     }
   }
-  &-date {
-    position: absolute;
-    top: 0; left: 0;
-    transform: translate(-10px, -10px);
-    background: white;
-    padding: 5px;
-  }
+
   &-visual {
     display: block;
   }
 
   &-main {
+    flex-grow: 1;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    overflow: hidden;
   }
   &-artiste {
 
@@ -62,12 +79,31 @@
   }
   &-link {
     position: absolute;
-    bottom: 0; right: 0;
-    @include square(30px);
+    left: 100%; bottom: 0;
+    transform: translateX(-30px);
+    height: 30px;
     background: color(pink);
-    @include typo(thin xxlarge lighter);
     display: flex;
-    justify-content: center;
     align-items: center;
+
+    transition: all 0.2s linear;
+
+    @include mq($from: mobile) {
+      .spectaclePreview:hover & {
+        transform: translateX(-100%);
+      }
+    }
+
+    &-icon {
+      width: 30px;
+      @include typo(thin xxlarge lighter);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text {
+      @include typo(thin uppercase small lighter nowrap);
+      padding-right: 10px;
+    }
   }
 }

@@ -1,7 +1,7 @@
 <?
 
 /**
- * Template Name: Ressources/Capsules
+ * Template Name: Liste d'articles
  */
 
 global $post;
@@ -22,13 +22,16 @@ $articles = get_posts([
 
   <? get_view('page-intro') ?>
 
-  <div class="page__articles-list">
-    <?
-    foreach($articles as $article) {
-      get_view('articlePreview');
-    }
-    ?>
+  <div class="inner">
+    <div class="page__articles-list">
+      <?
+      foreach($articles as $article) {
+        get_view('articlePreview');
+      }
+      ?>
+    </div>
   </div>
+
 </div>
 <?
 

@@ -1,0 +1,14 @@
+.page__error {
+  padding: 50px 0 150px 0;
+
+  .inner {}
+
+  h1 {
+    @include typo(bold center pink);
+    font-size: 300px;
+    opacity: 0.2;
+  }
+  p {
+    @include typo(xxlarge center pink);
+  }
+}

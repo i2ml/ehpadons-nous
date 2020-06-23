@@ -1,0 +1,25 @@
+.oeuvreDialog {
+  background: white;
+  padding: 40px;
+
+  @include mobile() {
+    padding: 20px;
+  }
+
+  hr {
+    clear: both;
+    border: 1px solid color(light);
+    margin: 20px 0;
+  }
+
+
+  &-content {
+    @extend .wysiwyg;
+    margin-bottom: 20px;
+  }
+
+  &-artist {
+    @include typo(thin);
+    margin-bottom: 20px;
+  }
+}
