@@ -1,6 +1,6 @@
 .wysiwyg {
 
-  @include typo(large);
+  @include typo(large justify);
   line-height: fontscale(xlarge);
 
   @include mobile() {
@@ -16,13 +16,26 @@
     }
   }
 
+  h1 {
+    @include typo(xlarge thin);
+    margin-bottom: 20px;
+  }
+  h2 {
+    @include typo(large bold);
+    margin-bottom: 10px;
+  }
+  h3 {
+    @include typo(large bold);
+    margin-bottom: 10px;
+  }
+
   a {
     @include typo(pink underline);
   }
 
   img {
     height: auto;
-    
+
     &.alignnone {
       margin-bottom: 20px;
     }

@@ -485,6 +485,7 @@ button {
 /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
 .wysiwyg, .page__accueil-apropos-description, .page__article-content, .page-intro-introduction, .page__default-content, .spectacleDialog-artist-description, .oeuvreDialog-content {
   font-size: 22px;
+  text-align: justify;
   line-height: 28px; }
   @media (max-width: 42.49em) {
     /* line 1, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
@@ -499,30 +500,45 @@ button {
       .wysiwyg p, .page__accueil-apropos-description p, .page__article-content p, .page-intro-introduction p, .page__default-content p, .spectacleDialog-artist-description p, .oeuvreDialog-content p, .wysiwyg ul, .page__accueil-apropos-description ul, .page__article-content ul, .page-intro-introduction ul, .page__default-content ul, .spectacleDialog-artist-description ul, .oeuvreDialog-content ul, .wysiwyg ol, .page__accueil-apropos-description ol, .page__article-content ol, .page-intro-introduction ol, .page__default-content ol, .spectacleDialog-artist-description ol, .oeuvreDialog-content ol {
         margin-bottom: 20px; } }
   /* line 19, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  .wysiwyg h1, .page__accueil-apropos-description h1, .page__article-content h1, .page-intro-introduction h1, .page__default-content h1, .spectacleDialog-artist-description h1, .oeuvreDialog-content h1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px; }
+  /* line 23, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  .wysiwyg h2, .page__accueil-apropos-description h2, .page__article-content h2, .page-intro-introduction h2, .page__default-content h2, .spectacleDialog-artist-description h2, .oeuvreDialog-content h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px; }
+  /* line 27, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  .wysiwyg h3, .page__accueil-apropos-description h3, .page__article-content h3, .page-intro-introduction h3, .page__default-content h3, .spectacleDialog-artist-description h3, .oeuvreDialog-content h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px; }
+  /* line 32, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
   .wysiwyg a, .page__accueil-apropos-description a, .page__article-content a, .page-intro-introduction a, .page__default-content a, .spectacleDialog-artist-description a, .oeuvreDialog-content a {
     color: #EE3464;
     text-decoration: underline; }
-  /* line 23, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  /* line 36, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
   .wysiwyg img, .page__accueil-apropos-description img, .page__article-content img, .page-intro-introduction img, .page__default-content img, .spectacleDialog-artist-description img, .oeuvreDialog-content img {
     height: auto; }
-    /* line 26, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+    /* line 39, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
     .wysiwyg img.alignnone, .page__accueil-apropos-description img.alignnone, .page__article-content img.alignnone, .page-intro-introduction img.alignnone, .page__default-content img.alignnone, .spectacleDialog-artist-description img.alignnone, .oeuvreDialog-content img.alignnone {
       margin-bottom: 20px; }
-    /* line 29, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+    /* line 42, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
     .wysiwyg img.alignright, .page__accueil-apropos-description img.alignright, .page__article-content img.alignright, .page-intro-introduction img.alignright, .page__default-content img.alignright, .spectacleDialog-artist-description img.alignright, .oeuvreDialog-content img.alignright {
       float: right;
       margin: 0 0 10px 20px; }
-    /* line 33, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+    /* line 46, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
     .wysiwyg img.alignleft, .page__accueil-apropos-description img.alignleft, .page__article-content img.alignleft, .page-intro-introduction img.alignleft, .page__default-content img.alignleft, .spectacleDialog-artist-description img.alignleft, .oeuvreDialog-content img.alignleft {
       float: left;
       margin: 0 20px 10px 0; }
-  /* line 39, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  /* line 52, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
   .wysiwyg iframe, .page__accueil-apropos-description iframe, .page__article-content iframe, .page-intro-introduction iframe, .page__default-content iframe, .spectacleDialog-artist-description iframe, .oeuvreDialog-content iframe {
     width: 100%; }
-  /* line 43, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+  /* line 56, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
   .wysiwyg ul, .page__accueil-apropos-description ul, .page__article-content ul, .page-intro-introduction ul, .page__default-content ul, .spectacleDialog-artist-description ul, .oeuvreDialog-content ul {
     margin-left: 20px; }
-    /* line 46, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
+    /* line 59, /Users/vwasteels/code/ehpadons-nous/wp-content/themes/ehpadonsnous/sass/components/_wysiwyg.scss */
     .wysiwyg ul li, .page__accueil-apropos-description ul li, .page__article-content ul li, .page-intro-introduction ul li, .page__default-content ul li, .spectacleDialog-artist-description ul li, .oeuvreDialog-content ul li {
       list-style: disc;
       list-style-position: inside; }
