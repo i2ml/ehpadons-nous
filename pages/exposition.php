@@ -20,12 +20,6 @@ get_header('compiled');
     ]);
     foreach($oeuvres as $oeuvre) {
       get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
-      get_view('oeuvrePreview');
     }
     ?>
   </div>
