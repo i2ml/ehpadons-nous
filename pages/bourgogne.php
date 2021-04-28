@@ -1,12 +1,13 @@
 <?
 
 /**
- * Template Name: test
+ * Template Name: bourgogne
  */
 
 global $post;
 get_header('compiled');
 
+$cplist = ["25320","25220","25620","21000","25660","25000","21121"]
 ?>
 <div class="page-container page__programme">
 
@@ -21,8 +22,15 @@ get_header('compiled');
     	'order'				  => 'ASC'
     ]);
     foreach($spectacles as $spectacle) {
+      $todisplay = false;
       $etablissement = get_field('etablissement', $spectacle->ID);
-      if(strpos(get_field('address', $etablissement->ID),"30") != false){
+      foreach ($cplist as $cp) {
+        if($todisplay != true){
+          $todisplay = strpos(get_field('address', $etablissement->ID),$cp) > -1;
+        } 
+      }
+  
+      if($todisplay){
         get_view('spectaclePreview');
       }
     }
@@ -30,6 +38,5 @@ get_header('compiled');
   </div>
 </div>
 <?
-
 get_footer('compiled');
 ?>
