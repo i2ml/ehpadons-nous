@@ -1,5 +1,5 @@
 <?php
-if (function_exists('acf_add_local_field_group')):
+if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
         'key' => 'group_5ed0d80e6a65a',
@@ -98,7 +98,68 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
+    acf_add_local_field_group(array(
+        'key' => 'group_608a79823ebae',
+        'title' => 'Edition',
+        'fields' => array(
+            array(
+                'key' => 'field_608a7988ddcfb',
+                'label' => 'année',
+                'name' => 'annee',
+                'type' => 'number',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'admin_column_enabled' => 0,
+                'admin_column_post_types' => '',
+                'admin_column_taxonomies' => '',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => array(
+            0 => 'the_content',
+            1 => 'excerpt',
+            2 => 'discussion',
+            3 => 'comments',
+            4 => 'revisions',
+            5 => 'slug',
+            6 => 'author',
+            7 => 'format',
+            8 => 'page_attributes',
+            9 => 'categories',
+            10 => 'tags',
+            11 => 'send-trackbacks',
+        ),
+        'active' => true,
+        'description' => '',
+    ));
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ecfcec0f2915',
         'title' => 'Options : Footer',
@@ -205,7 +266,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ecfb434a039c',
         'title' => 'Page : Accueil',
@@ -433,7 +494,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ef1fb229632c',
         'title' => 'Page : default',
@@ -492,11 +553,12 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ecf74a6c649b',
         'title' => 'Page : Le programme',
-        'fields' => array(),
+        'fields' => array(
+        ),
         'location' => array(
             array(
                 array(
@@ -528,7 +590,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ef1f5f219116',
         'title' => 'Page : Liste de pages',
@@ -653,7 +715,8 @@ if (function_exists('acf_add_local_field_group')):
                             'pink' => 'Rose',
                             'green' => 'Vert',
                         ),
-                        'default_value' => array(),
+                        'default_value' => array(
+                        ),
                         'allow_null' => 0,
                         'multiple' => 0,
                         'ui' => 0,
@@ -682,7 +745,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ecf7783058da',
         'title' => 'Page : Ressources/Capsules',
@@ -744,7 +807,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ece3e4518d02',
         'title' => 'Type : Artiste',
@@ -822,11 +885,12 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ece3e4c78196',
         'title' => 'Type : Capsule',
-        'fields' => array(),
+        'fields' => array(
+        ),
         'location' => array(
             array(
                 array(
@@ -858,7 +922,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_608b33254255a',
         'title' => 'Type : Edition',
@@ -919,7 +983,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ece3dfb86b1c',
         'title' => 'Type : Établissement',
@@ -994,7 +1058,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ece3e4b0cdd6',
         'title' => 'Type : Oeuvre',
@@ -1079,7 +1143,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_608b3fe4b1000',
         'title' => 'Type : Sous-Edition',
@@ -1177,7 +1241,7 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
+    
     acf_add_local_field_group(array(
         'key' => 'group_5ece3e4975192',
         'title' => 'Type : Spectacle',
@@ -1272,6 +1336,33 @@ if (function_exists('acf_add_local_field_group')):
                 'return_format' => 'object',
                 'ui' => 1,
             ),
+            array(
+                'key' => 'field_608b419eafbca',
+                'label' => 'Sous Edition',
+                'name' => 'sousedition',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'admin_column_enabled' => 1,
+                'admin_column_post_types' => array(
+                    0 => 'sousedition',
+                ),
+                'admin_column_taxonomies' => '',
+                'post_type' => array(
+                    0 => 'sousedition',
+                ),
+                'taxonomy' => '',
+                'allow_null' => 0,
+                'multiple' => 0,
+                'return_format' => 'object',
+                'ui' => 1,
+            ),
         ),
         'location' => array(
             array(
@@ -1305,5 +1396,5 @@ if (function_exists('acf_add_local_field_group')):
         'active' => true,
         'description' => '',
     ));
-
-endif; ?>
+    
+    endif; ?>

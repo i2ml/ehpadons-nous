@@ -14,8 +14,17 @@ get_header('compiled');
   <div class="inner">
     <div class="page__pages-list">
       <?
-      foreach(get_field('pages') as $item) {
-        $page = $item['page'];
+      $editions = get_posts([
+        'post_type'     => 'edition',
+        'posts_per_page' => -1,
+        'orderby'			  => 'menu_order',
+        'order'				  => 'ASC'
+      ]);
+      foreach($editions as $edition) {
+
+        var_dump($edition->annee);
+
+        /*$page = $item['page'];
         ?>
         <div class="page__pages-item">
           <h2><?= $page->post_title ?></h2>
@@ -26,7 +35,7 @@ get_header('compiled');
             <?= $item['button_text'] ?>
           </a>
         </div>
-        <?
+        <?*/
       }
       ?>
     </div>
