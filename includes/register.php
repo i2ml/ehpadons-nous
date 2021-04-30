@@ -113,6 +113,40 @@ function register_all() {
   	'can_export' => true,
   ));
 
+    register_post_type('edition', array(
+        'labels' => array(
+            'name' => __('Editions', 'blank'),
+            'singular_name' => __('Edition', 'blank'),
+            'add_new' => __('Ajouter Nouveau', 'blank'),
+            'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+            'edit' => __('Editer item', 'blank')
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'hierarchical' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'editions'],
+        'supports' => array(),
+        'can_export' => true,
+    ));
+
+    register_post_type('sousedition', array(
+        'labels' => array(
+            'name' => __('Sous-Editions', 'blank'),
+            'singular_name' => __('Sous-Edition', 'blank'),
+            'add_new' => __('Ajouter Nouveau', 'blank'),
+            'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+            'edit' => __('Editer item', 'blank')
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'hierarchical' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'souseditions'],
+        'supports' => array(),
+        'can_export' => true,
+    ));
+
 }
 
 add_filter( 'generate_show_title','tu_gig_remove_title' );
