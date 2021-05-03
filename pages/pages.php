@@ -1,3 +1,5 @@
+
+
 <?
 
 /**
@@ -12,7 +14,7 @@ get_header('compiled');
   <? get_view('page-intro') ?>
 
   <div class="inner">
-    <div class="page__pages-list">
+    
       <?
       $editions = get_posts([
         'post_type'     => 'edition',
@@ -21,24 +23,35 @@ get_header('compiled');
         'order'				  => 'ASC'
       ]);
       foreach($editions as $edition) {
-
-        var_dump($edition->annee);
-
-        /*$page = $item['page'];
-        ?>
-        <div class="page__pages-item">
-          <h2><?= $page->post_title ?></h2>
-          <main>
-            <?= $item['description'] ?>
-          </main>
-          <a class="button-<?= $item['button_color'] ?>" href="<?= get_permalink($page->ID) ?>">
-            <?= $item['button_text'] ?>
-          </a>
-        </div>
-        <?*/
-      }
       ?>
-    </div>
+      <div class="page__pages-listTest">
+        <p>
+        <?php
+          echo $edition->annee;
+          ?>
+          </p>
+          <?php
+          foreach(get_field('pages') as $item) {
+          $page = $item['page'];
+          ?>
+          <div class="page__pages-item">
+            <h2><?= $page->post_title ?></h2>
+            <main>
+              <?= $item['description'] ?>
+            </main>
+            <a class="button-<?= $item['button_color'] ?>" href="<?= get_permalink($page->ID) ?>">
+              <?= $item['button_text'] ?>
+            </a>
+
+          </div>
+          <?php
+          echo get_permalink($page->ID);
+        }?>
+      </div>
+      <?php
+    }
+      ?>
+    
   </div>
 
 </div>
