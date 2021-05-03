@@ -9,11 +9,13 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    border:1px solid black;
+    
     @include mobile() {
       flex-wrap: wrap;
     }
   }
+
+  
   
   &-listTest {
     display: flex;

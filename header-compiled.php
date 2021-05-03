@@ -20,7 +20,7 @@
   <meta name="google-site-verification" content="1OOkyToxjkcDc2Fxd2K2DsYDkRNx9YDZnDJCrNhLcMc" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=f766a25c" rel="stylesheet" />
+  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=d04ad64b" rel="stylesheet" />
 
   <script>
 		var template_dir = "<?= get_stylesheet_directory_uri() ?>";

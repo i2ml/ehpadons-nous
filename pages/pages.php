@@ -13,6 +13,7 @@ get_header('compiled');
 
     <div class="inner">
         <?
+        $compteur = 0;
         $editions = get_posts([
             'post_type' => 'edition',
             'posts_per_page' => -1,
@@ -27,29 +28,56 @@ get_header('compiled');
         ]);
         foreach ($editions as $edition) {
             ?>
-            <div class="page__pages-listTest">
-                <p>
+            <div class="page__pages-list">
+                <p >
                     <?php
                     echo $edition->annee;
                     ?>
                 </p>
                 <?php
                 foreach ($souseditions as $sousedition) {
-                    if (get_fields($sousedition->ID)['edition'] == $edition) {
-                        $editionfields = get_fields($sousedition->ID);
-                        ?>
-                        <div class="page__pages-item">
-                            <h2><?= $editionfields['region'] ?></h2>
-                            <main>
-                                <?= $editionfields['description'] ?>
-                            </main>
-                            <a class="button-<?= ["green","yellow","pink"][rand ( 0,2)] ?>" href=".">
-                                 VOIR LA PAGE
-                            </a>
 
-                        </div>
-                        <?php
-                    }
+                    
+                    
+                if (get_fields($sousedition->ID)['edition'] == $edition) {
+                        if($compteur <= 2){
+                                $editionfields = get_fields($sousedition->ID);
+                                ?>
+                                <div class="page__pages-item">
+                                    <h2><?= $editionfields['region'] ?></h2>
+                                    <main>
+                                        <?= $editionfields['description'] ?>
+                                    </main>
+                                    <a class="button-<?= ["green","yellow","pink"][rand ( 0,2)] ?>" href=".">
+                                        VOIR LA PAGE
+                                    </a>
+        
+                                </div>
+                                <?php
+                            
+                            $compteur += 1;
+                        }else{?>
+                            </div>
+                            <div class="page__pages-list">
+                            <?php
+                            $compteur = 0;
+                            $editionfields = get_fields($sousedition->ID);
+                                ?>
+                                <div class="page__pages-item">
+                                    <h2><?= $editionfields['region'] ?></h2>
+                                    <main>
+                                        <?= $editionfields['description'] ?>
+                                    </main>
+                                    <a class="button-<?= ["green","yellow","pink"][rand ( 0,2)] ?>" href=".">
+                                        VOIR LA PAGE
+                                    </a>
+        
+                                </div>
+                                <?php
+                        }
+                }
+                    
+                    
                 }
                 //$page = $item['page'];
                 /*
