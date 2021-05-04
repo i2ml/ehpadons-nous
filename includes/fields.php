@@ -503,7 +503,7 @@ if( function_exists('acf_add_local_field_group') ):
                 array(
                     'param' => 'page_template',
                     'operator' => '==',
-                    'value' => 'pages/programme.php',
+                    'value' => 'pages/spectacles.php',
                 ),
             ),
         ),
