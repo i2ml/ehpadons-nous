@@ -146,7 +146,43 @@ function register_all() {
         'supports' => array(),
         'can_export' => true,
     ));
-
+    
+  register_post_type('partenariat', array(
+    'labels' => array(
+        'name' => __('Partenariat', 'blank'),
+        'singular_name' => __('Partenariat', 'blank'),
+        'add_new' => __('Ajouter Nouveau', 'blank'),
+        'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+        'edit' => __('Editer item', 'blank')
+    ),
+    'public' => true,
+    'publicly_queryable' => true,
+    'hierarchical' => true,
+    'has_archive' => true,
+    'rewrite' => ['slug' => 'partenariat'],
+    'supports' => array(),
+    'can_export' => true,
+));
+register_post_type('partenaire', array(
+  'labels' => array(
+      'name' => __('Partenaire', 'blank'),
+      'singular_name' => __('Partenaire', 'blank'),
+      'add_new' => __('Ajouter Nouveau', 'blank'),
+      'add_new_item' => __('Ajouter Nouvel Item', 'blank'),
+      'edit' => __('Editer item', 'blank')
+  ),
+  'public' => true,
+  'publicly_queryable' => true,
+  'hierarchical' => true,
+  'has_archive' => true,
+  'rewrite' => ['slug' => 'partenaire'],
+  'supports' => array(
+    'title',
+    'editor',
+    'thumbnail',
+  ),
+  'can_export' => true,
+));
 }
 
 add_filter( 'generate_show_title','tu_gig_remove_title' );

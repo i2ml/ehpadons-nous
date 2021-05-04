@@ -1106,10 +1106,10 @@
                 "maxlength": ""
             },
             {
-                "key": "field_6091468a3d0f9",
-                "label": "Photo",
-                "name": "photo",
-                "type": "image",
+                "key": "field_609146b73d0fb",
+                "label": "Description",
+                "name": "description",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1121,21 +1121,16 @@
                 "admin_column_enabled": 0,
                 "admin_column_post_types": "",
                 "admin_column_taxonomies": "",
-                "return_format": "array",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
             },
             {
-                "key": "field_609146a13d0fa",
-                "label": "Site Internet",
-                "name": "site_internet",
+                "key": "field_60914fbacea18",
+                "label": "Site",
+                "name": "site",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -1150,41 +1145,6 @@
                 "admin_column_taxonomies": "",
                 "default_value": "",
                 "placeholder": ""
-            },
-            {
-                "key": "field_609146b73d0fb",
-                "label": "Description",
-                "name": "description",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "admin_column_enabled": 0,
-                "admin_column_post_types": [
-                    "post",
-                    "page",
-                    "etablissement",
-                    "artiste",
-                    "spectacle",
-                    "oeuvre",
-                    "edition",
-                    "sousedition"
-                ],
-                "admin_column_taxonomies": [
-                    "category",
-                    "post_tag",
-                    "link_category"
-                ],
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
             }
         ],
         "location": [
@@ -1192,7 +1152,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "post"
+                    "value": "partenaire"
                 }
             ]
         ],
@@ -1201,7 +1161,20 @@
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": "",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
         "active": true,
         "description": ""
     },
@@ -1250,9 +1223,13 @@
                     "id": ""
                 },
                 "admin_column_enabled": 1,
-                "admin_column_post_types": "",
+                "admin_column_post_types": [
+                    "partenaire"
+                ],
                 "admin_column_taxonomies": "",
-                "post_type": "",
+                "post_type": [
+                    "partenaire"
+                ],
                 "taxonomy": "",
                 "allow_null": 0,
                 "multiple": 0,
@@ -1265,7 +1242,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "post"
+                    "value": "partenariat"
                 }
             ]
         ],
@@ -1274,7 +1251,20 @@
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": "",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "discussion",
+            "comments",
+            "revisions",
+            "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
         "active": true,
         "description": ""
     },
