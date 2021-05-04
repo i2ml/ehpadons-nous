@@ -11,7 +11,7 @@ get_header('compiled');
 
     <? get_view('page-intro') ?>
 
-    <div class="inner">
+        <div class="inner">
         <?
         
         $editions = get_posts([
@@ -29,17 +29,16 @@ get_header('compiled');
         foreach ($editions as $edition) {
             $compteur = 0;
             ?>
-            <div class="page__pages-list">
-                <p >
+                <div class="page__pages-Titre">
+                <p>
                     <?php
                     echo $edition->annee;
                     ?>
                 </p>
+                </div>
+                <div class="page__pages-list">
                 <?php
                 foreach ($souseditions as $sousedition) {
-
-                    
-                    
                 if (get_fields($sousedition->ID)['edition'] == $edition) {
                         
                                 $editionfields = get_fields($sousedition->ID);
@@ -63,9 +62,9 @@ get_header('compiled');
                             <?php
                             $compteur= 0;
                         }
-                }
+                }?>
                     
-                    
+                    <?php
                 }
                 //$page = $item['page'];
                 /*

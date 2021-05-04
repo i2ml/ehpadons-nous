@@ -1,10 +1,7 @@
 .page__pages {
   padding-bottom: 200px;
 
-  .inner {
-    width: 1200px;
-  }
-
+  
   &-list {
     display: flex;
     justify-content: center;
@@ -17,14 +14,14 @@
 
   
   
-  &-listTest {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+  &-Titre {
+    font-family: $titleFont;
+      @include typo($desktop: thin xxlarge center uppercase, $mobile: large);
+    text-align:center;
+    font-size: 2em;
+    margin-bottom: 5%;
+    margin-top: 2%;
     
-    @include mobile() {
-      flex-wrap: wrap;
-    }
   }
   &-item {
     background: white;
@@ -55,8 +52,8 @@
       flex-grow: 1;
     }
 
-    > a {
-
+    > p {
+      
     }
   }
 }
