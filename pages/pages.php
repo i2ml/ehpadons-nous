@@ -1,7 +1,7 @@
 <?
 
 /**
- * Template Name: Liste de pages
+ * Template Name: Programme menu
  */
 
 global $post;
