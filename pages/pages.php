@@ -13,7 +13,7 @@ get_header('compiled');
 
     <div class="inner">
         <?
-        $compteur = 0;
+        
         $editions = get_posts([
             'post_type' => 'edition',
             'posts_per_page' => -1,
@@ -27,6 +27,7 @@ get_header('compiled');
             'order' => 'ASC',
         ]);
         foreach ($editions as $edition) {
+            $compteur = 0;
             ?>
             <div class="page__pages-list">
                 <p >
@@ -40,7 +41,7 @@ get_header('compiled');
                     
                     
                 if (get_fields($sousedition->ID)['edition'] == $edition) {
-                        if($compteur <= 2){
+                        
                                 $editionfields = get_fields($sousedition->ID);
                                 ?>
                                 <div class="page__pages-item">
@@ -54,26 +55,13 @@ get_header('compiled');
         
                                 </div>
                                 <?php
-                            
+                            if($compteur < 2){
                             $compteur += 1;
                         }else{?>
                             </div>
                             <div class="page__pages-list">
                             <?php
-                            $compteur = 0;
-                            $editionfields = get_fields($sousedition->ID);
-                                ?>
-                                <div class="page__pages-item">
-                                    <h2><?= $editionfields['region'] ?></h2>
-                                    <main>
-                                        <?= $editionfields['description'] ?>
-                                    </main>
-                                    <a class="button-<?= ["green","yellow","pink"][rand ( 0,2)] ?>" href=".">
-                                        VOIR LA PAGE
-                                    </a>
-        
-                                </div>
-                                <?php
+                            $compteur= 0;
                         }
                 }
                     
