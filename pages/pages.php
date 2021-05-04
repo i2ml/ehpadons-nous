@@ -17,13 +17,13 @@ get_header('compiled');
         $editions = get_posts([
             'post_type' => 'edition',
             'posts_per_page' => -1,
-            'orderby' => 'title',
-            'order' => 'ASC'
+            'orderby' => 'post_title',
+            'order' => 'DESC'
         ]);
         $souseditions = get_posts([
             'post_type' => 'sousedition',
             'posts_per_page' => -1,
-            'orderby' => 'title',
+            'orderby' => 'post_title',
             'order' => 'ASC',
         ]);
         foreach ($editions as $edition) {
