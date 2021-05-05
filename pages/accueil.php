@@ -63,6 +63,7 @@ get_header('compiled');
   width: 70%;
   height: 60%;
   transform: translate(-50%, -50%);
+  
 }
 .slider-container .slider-content .slider-single {
   position: absolute;
@@ -75,14 +76,17 @@ get_header('compiled');
 }
 .slider-container .slider-content .slider-single .slider-single-image {
   position: relative;
-  left: 0;
+  
   top: 0;
   width: 100%;
   height: 100%;
+  margin-left:2%;
+  margin-right:2%;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(0);
   opacity: 0;
+  
 }
 .slider-container .slider-content .slider-single .slider-single-download {
   position: absolute;
@@ -396,13 +400,14 @@ get_header('compiled');
                         $visual = wp_get_attachment_image_src(get_post_thumbnail_id($partenaire->ID), 'thumbnail');
                         $description = get_fields($partenaire->ID)['description'];
                         $url = get_fields($partenaire->ID)['site'];
-                        
+                        var_dump($visual[0]);
                         $compteur += 1;
                         ?>
+                        
                       <div class="slider-single">
                           
-                          <a href="<?php echo $url ?>" target="_blank">
-                              <img class="slider-single-image" src="<?php echo $visual[0] ?>" target="_blank" rel="noreferrer" alt="<?php echo $compteur ?>">
+                          <a href="<?php echo $url ?>" target="_blank" rel="noreferrer">
+                              <img class="slider-single-image" src="<?php echo $visual[0] ?>"  >
                           </a>
                           <h1 class="slider-single-title"><?php echo $description ?></h1>
                       </div>            
@@ -418,7 +423,7 @@ get_header('compiled');
           </div>
         </div>
       </div>
-
+      <img class="" src="<?php echo $visual[0] ?>"  >
                     
                 
       <footer class="footer">

@@ -1014,6 +1014,33 @@
                 "admin_column_taxonomies": "",
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_6092b50d43c4c",
+                "label": "Logo",
+                "name": "logo",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "admin_column_enabled": 0,
+                "admin_column_post_types": "",
+                "admin_column_taxonomies": "",
+                "return_format": "array",
+                "preview_size": "large",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
             }
         ],
         "location": [
