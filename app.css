@@ -1527,17 +1527,17 @@ button {
     /* line 38, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
     .footer-menu .menu-item {
       color: #fff; }
-  /* line 43, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
+  /* line 44, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
   .footer hr {
     border: 1px solid white; }
-  /* line 47, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
+  /* line 48, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
   .footer-social {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
     color: #fff; }
-    /* line 52, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
+    /* line 53, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_footer.scss */
     .footer-social .icon {
       fill: white;
       width: 30px;
@@ -1569,8 +1569,7 @@ button {
   .prefooter-container {
     position: relative;
     z-index: 1;
-    background: white;
-    padding: 60px 0; }
+    background: white; }
   /* line 33, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter-title {
     font-family: "adventproweb";

@@ -5,6 +5,7 @@
             <h3 class="prefooter-title">Les partenaires du festival</h3>
             <div class="prefooter-logos">
               <?
+              
               foreach(get_field('partners', 'options') as $partner):
                 ?>
                 <a href="<?= $partner['url'] ?>" target="_blank">
