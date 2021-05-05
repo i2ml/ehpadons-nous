@@ -39,6 +39,7 @@
       @include typo(lighter);
     }
   }
+  
 
   hr {
     border: 1px solid white;
@@ -47,7 +48,7 @@
   &-social {
     display: flex;
     align-items: center;
-    @include typo(lighter)
+    @include typo(lighter);
 
     .icon {
       fill: white;
@@ -55,4 +56,6 @@
       margin-right: 5px;
     }
   }
+  
 }
+

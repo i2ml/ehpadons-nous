@@ -40,7 +40,7 @@ get_header('compiled');
             <?php
             foreach ($souseditions as $sousedition) {
                 if (get_fields($sousedition->ID)['edition'] == $edition) {
-
+                        
                     $editionfields = get_fields($sousedition->ID);
                     ?>
                     <div class="page__pages-item">

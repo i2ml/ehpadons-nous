@@ -5,6 +5,13 @@
             <h3 class="prefooter-title">Les partenaires du festival</h3>
             <div class="prefooter-logos">
               <?
+              $partenaire = get_posts([
+                'post_type' => 'partenaire',
+                'posts_per_page' => -1,
+                'orderby' => 'post_title',
+                'order' => 'DESC'
+            ]);
+            var_dump($partenaire->ID);
               foreach(get_field('partners', 'options') as $partner):
                 ?>
                 <a href="<?= $partner['url'] ?>" target="_blank">
