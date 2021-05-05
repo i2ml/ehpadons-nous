@@ -8,27 +8,26 @@ global $post;
 get_header('compiled');
 
 ?>
-<div class="page-container page__programme">
+    <div class="page-container page__programme">
 
-    <?php get_view('page-intro') ?>
+        <?php get_view('page-intro') ?>
 
-  <div class="page__programme-list">
-      <?php
-    $spectacles = get_posts([
-      'post_type'     => 'spectacle',
-      'posts_per_page' => -1,
-    	'orderby'			  => 'menu_order',
-    	'order'				  => 'ASC'
-    ]);
-    foreach($spectacles as $spectacle) {
-      $etablissement = get_field('etablissement', $spectacle->ID);
-      if(strpos(get_field('address', $etablissement->ID),"30") != false){
-        get_view('spectaclePreview');
-      }
-    }
-    ?>
-  </div>
-</div>
+        <div class="page__programme-list">
+            <?php
+            $spectacles = get_posts([
+                'post_type' => 'spectacle',
+                'posts_per_page' => -1,
+                'orderby' => 'menu_order',
+                'order' => 'ASC'
+            ]);
+            foreach ($spectacles as $spectacle) {
+                if (get_field('sousedition', $spectacle->ID)->ID == $_GET["sous-edition"]){
+                    get_view('spectaclePreview');
+               }
+            }
+            ?>
+        </div>
+    </div>
 <?php
 
 get_footer('compiled');
