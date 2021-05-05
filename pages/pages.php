@@ -48,9 +48,15 @@ get_header('compiled');
                         <main>
                             <?= $editionfields['description'] ?>
                         </main>
-                        <a class="button-<?= ["green", "yellow", "pink"][rand(0, 2)] ?>" href=".">
-                            VOIR LA PAGE
-                        </a>
+                        <form action="./spectacles" method="get">
+                            <input type="hidden" value="<?= $sousedition->ID ?>" name="sous-edition">
+                            <a class="button-<?= ["green", "yellow", "pink"][rand(0, 2)] ?>" href="#"
+                               onclick="$(this).closest('form').submit()">
+                                VOIR LA PAGE
+                            </a>
+                        </form>
+
+
                     </div>
                     <?php
                     if ($compteur < 2) {
@@ -66,23 +72,7 @@ get_header('compiled');
 
                 <?php
             }
-            //$page = $item['page'];
-            /*
-
             ?>
-            <div class="page__pages-item">
-                <h2><?= $page->post_title ?></h2>
-                <main>
-                    <?= $item['description'] ?>
-                </main>
-                <a class="button-<?= $item['button_color'] ?>" href="<?= get_permalink($page->ID) ?>">
-                    <?= $item['button_text'] ?>
-                </a>
-
-            </div>
-            <?php
-            echo get_permalink($page->ID);
-        } */ ?>
             </div>
             <?php
         }
