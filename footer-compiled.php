@@ -63,7 +63,7 @@
 		<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/jquery.min.js"></script>
 		<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/lodash.min.js"></script>
 		<script src="<?= get_stylesheet_directory_uri() ?>/assets/js/glide.min.js"></script>
-		<script src="<?= get_stylesheet_directory_uri() ?>/app.js?noCache=636ffce3"></script>
+		<script src="<?= get_stylesheet_directory_uri() ?>/app.js?noCache=6b5c4aa3"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167999934-1"></script>

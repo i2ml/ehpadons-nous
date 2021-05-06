@@ -80,7 +80,7 @@ get_header('compiled');
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
@@ -258,11 +258,22 @@ get_header('compiled');
   position: relative;
   margin: 0 auto;
   width: 200px;
-  height: 100px;
+  height: 200px;
+padding-bottom: 50px;
+background-color: white;
   
 }
-.espacementBot{
-  margin-top:50px;
+
+.slider-container .slider-content .slider-single .slider-single-title {
+  display: block;
+  float: left;
+  margin: 16px 0 0 20px;
+  font-size: 10px;
+  font-family: "karla";
+  font-weight: 400;
+  color: black;
+  transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+  opacity: 0;
 }
 
 }
@@ -420,7 +431,7 @@ get_header('compiled');
                         $visual = get_fields($partenaire->ID)['logo'];
                         $description = get_fields($partenaire->ID)['description'];
                         $url = get_fields($partenaire->ID)['site'];
-                        var_dump($visual[0]);
+                        
                         $compteur += 1;
                         ?>
                         

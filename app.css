@@ -1546,8 +1546,9 @@ button {
 
 /* line 1, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
 .prefooter {
-  position: relative; }
-  /* line 4, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  position: relative;
+  background-color: white; }
+  /* line 6, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter:before, .prefooter:after {
     content: '';
     display: block;
@@ -1555,33 +1556,33 @@ button {
     top: 0;
     left: 0;
     width: 100%; }
-  /* line 11, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  /* line 13, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter:before {
     transform: rotate(-4deg) translate(50px, -30px);
     background: #79DAC1;
     height: 200px; }
-  /* line 17, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  /* line 19, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter:after {
     transform: rotate(3deg) translate(-20px, -20px);
     background: #EE3464;
     height: 100px; }
-  /* line 24, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  /* line 26, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter-container {
     position: relative;
     z-index: 1;
     background: white; }
-  /* line 33, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  /* line 35, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter-title {
     font-family: "adventproweb";
     text-align: center;
     font-size: 50px;
     text-transform: uppercase;
-    margin-bottom: 40px; }
+    margin-bottom: 20px; }
     @media (max-width: 42.49em) {
-      /* line 33, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+      /* line 35, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
       .prefooter-title {
         font-size: 28px; } }
-  /* line 39, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+  /* line 41, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
   .prefooter-logos {
     display: -ms-flexbox;
     display: flex;
@@ -1590,11 +1591,11 @@ button {
     -ms-flex-align: center;
         align-items: center; }
     @media (max-width: 42.49em) {
-      /* line 39, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+      /* line 41, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
       .prefooter-logos {
         -ms-flex-direction: column;
             flex-direction: column; } }
-    /* line 48, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
+    /* line 50, /opt/lampp/htdocs/wp-content/themes/ehpadonsnous/sass/views/_prefooter.scss */
     .prefooter-logos a {
       display: block;
       margin-bottom: 20px; }
