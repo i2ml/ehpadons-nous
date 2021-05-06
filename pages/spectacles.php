@@ -297,9 +297,7 @@ background-color: white;
             ?>
         </div>
     </div>
-    <div class="prefooter">
-        <div class="prefooter-container">
-            <div class="inner">
+    
                 <?php
                     $partenaires = get_posts([
                     'post_type' => 'Partenaire',
@@ -314,13 +312,21 @@ background-color: white;
                         'order' => 'DESC'
                     ]);
                     $compteur = 0;
-                    foreach($partenariats as $partenariat){$compteur += 1;}
+                    foreach($partenariats as $partenariat){
+                        if(get_field("sous-edition",$partenariat->ID)->ID == $_GET["sous-edition"]){
+                            $compteur += 1;
+                        }
+                    }
+                    
                     if($compteur == 0){
-                ?>
-                            <h3 class="prefooter-title">Aucun partenaires pour la Sous édition <?= $nomSousEdition ?></h3>
+                ?>  
+                           
                             <?php
                         }else{
                             ?>
+                            <div class="prefooter">
+                        <div class="prefooter-container">
+                            <div class="inner">
                             <h3 class="prefooter-title">Les partenaires de la Sous édition <?= $nomSousEdition ?></h3>
                             <?php
                         if($compteur == 1){?>

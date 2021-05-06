@@ -14,13 +14,13 @@
   <meta http-equiv="Content-Language" content="fr_FR" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
-  <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/favicon-120x120.png">
-  <link rel="apple-touch-icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/favicon-120x120.png">
+  <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/logo-full.ico">
+  <link rel="apple-touch-icon" href="<?= get_stylesheet_directory_uri() ?>/assets/images/logo-full.ico">
 
   <meta name="google-site-verification" content="1OOkyToxjkcDc2Fxd2K2DsYDkRNx9YDZnDJCrNhLcMc" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=6b5c4aa3" rel="stylesheet" />
+  <link href="<?= get_stylesheet_directory_uri() ?>/app.css?noCache=3221a9b2" rel="stylesheet" />
 
   <script>
 		var template_dir = "<?= get_stylesheet_directory_uri() ?>";
