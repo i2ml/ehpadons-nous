@@ -7,11 +7,20 @@
 global $post;
 get_header('compiled');
 
+$sousedition = get_post($_GET["sous-edition"]);
+$directionartistique = get_field("direction_artistique",$sousedition->ID);
 ?>
+
+
+
     <div class="page-container page__programme">
 
-        <?php get_view('page-intro') ?>
-
+        <?php get_view('page-intro');
+        ?>
+        <div class="page-intro-introduction">
+            <p>Retrouvez ici la <b>programmation éclectique</b> : musique classique, jazz, musique française, flamenco, tango, electro et hip-hop</p>
+            <p>Direction artistique : <?= $directionartistique?></p>
+        </div>
         <div class="page__programme-list">
             <?php
             $spectacles = get_posts([
