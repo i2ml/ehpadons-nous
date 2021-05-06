@@ -222,10 +222,7 @@ get_header('compiled');
   color: black;
   transform: translateY(-50%);
   padding: 20px 15px;
-  border-top: 2px solid #fdc84b;
-  border-right: 2px solid #fdc84b;
-  border-bottom: 2px solid #fdc84b;
-  border-left: 2px solid #fdc84b;
+  
   margin-right: -2px;
 }
 .slider-container .slider-right {
@@ -237,10 +234,7 @@ get_header('compiled');
   color: black;
   transform: translateY(-50%);
   padding: 20px 15px;
-  border-top: 2px solid #fdc84b;
-  border-right: 2px solid #fdc84b;
-  border-bottom: 2px solid #fdc84b;
-  border-left: 2px solid #fdc84b;
+  
   margin-left: -2px;
 }
 
