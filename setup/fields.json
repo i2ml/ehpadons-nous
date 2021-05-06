@@ -1,1503 +1,1483 @@
-if( function_exists('acf_add_local_field_group') ):
-
-acf_add_local_field_group(array(
-'key' => 'group_5ed0d80e6a65a',
-'title' => 'Page : intro',
-'fields' => array(
-array(
-'key' => 'field_5ed0d8689487f',
-'label' => 'Titre',
-'name' => 'intro_title',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'capsule',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ed0d87094880',
-'label' => 'Texte',
-'name' => 'intro_text',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'full',
-'media_upload' => 1,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'page',
-),
-array(
-'param' => 'page_template',
-'operator' => '!=',
-'value' => 'pages/accueil.php',
-),
-),
-),
-'menu_order' => -1,
-'position' => 'normal',
-'style' => 'default',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'featured_image',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ecfcec0f2915',
-'title' => 'Options : Footer',
-'fields' => array(
-array(
-'key' => 'field_5ecfced44a8e4',
-'label' => 'Partenaires',
-'name' => '',
-'type' => 'tab',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'placement' => 'top',
-'endpoint' => 0,
-),
-array(
-'key' => 'field_5ecfcedf4a8e5',
-'label' => 'Liste des partenaires',
-'name' => 'partners',
-'type' => 'repeater',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'collapsed' => '',
-'min' => 0,
-'max' => 0,
-'layout' => 'table',
-'button_label' => '',
-'sub_fields' => array(
-array(
-'key' => 'field_5ecfcef34a8e6',
-'label' => 'Logo',
-'name' => 'logo',
-'type' => 'image',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'return_format' => 'array',
-'preview_size' => 'medium',
-'library' => 'all',
-'min_width' => '',
-'min_height' => '',
-'min_size' => '',
-'max_width' => '',
-'max_height' => '',
-'max_size' => '',
-'mime_types' => '',
-),
-array(
-'key' => 'field_5ecfcf024a8e7',
-'label' => 'Lien',
-'name' => 'url',
-'type' => 'url',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-),
-),
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'options_page',
-'operator' => '==',
-'value' => 'footer-settings',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => '',
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ecfb434a039c',
-'title' => 'Page : Accueil',
-'fields' => array(
-array(
-'key' => 'field_5ecfb4b0e78d1',
-'label' => 'Introduction : description',
-'name' => 'intro_description',
-'type' => 'textarea',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-'maxlength' => '',
-'rows' => '',
-'new_lines' => 'br',
-),
-array(
-'key' => 'field_5ecfb4cce78d2',
-'label' => 'Introduction : date',
-'name' => 'intro_date',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'capsule',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ecfb4e0e78d3',
-'label' => 'À propos : description',
-'name' => 'apropos_description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 0,
-'delay' => 0,
-),
-array(
-'key' => 'field_5ecfb4f6e78d4',
-'label' => 'Articles : titre',
-'name' => 'articles_title',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ed10c82fbc9e',
-'label' => 'Articles : description',
-'name' => 'articles_description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 0,
-'delay' => 0,
-),
-array(
-'key' => 'field_5ed0d772a0a51',
-'label' => 'Articles : lien bouton',
-'name' => 'articles_link',
-'type' => 'page_link',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'page',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'allow_archives' => 0,
-'multiple' => 0,
-),
-array(
-'key' => 'field_5ecfb534e78d5',
-'label' => 'Exposition : description',
-'name' => 'exposition_description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'capsule',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 0,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'page_template',
-'operator' => '==',
-'value' => 'pages/accueil.php',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'featured_image',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ef1fb229632c',
-'title' => 'Page : default',
-'fields' => array(
-array(
-'key' => 'field_5ef1fb2ff0152',
-'label' => 'Contenu',
-'name' => 'content',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'full',
-'media_upload' => 1,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'page_template',
-'operator' => '==',
-'value' => 'default',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'featured_image',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ecf74a6c649b',
-'title' => 'Page : Le programme',
-'fields' => array(
-),
-'location' => array(
-array(
-array(
-'param' => 'page_template',
-'operator' => '==',
-'value' => 'pages/programme.php',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'featured_image',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ef1f5f219116',
-'title' => 'Page : Programme menu',
-'fields' => array(
-),
-'location' => array(
-array(
-array(
-'param' => 'page_template',
-'operator' => '==',
-'value' => 'pages/pages.php',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => '',
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ecf7783058da',
-'title' => 'Page : Ressources/Capsules',
-'fields' => array(
-array(
-'key' => 'field_5ecf77ce44175',
-'label' => 'Categories',
-'name' => 'categories',
-'type' => 'taxonomy',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'taxonomy' => 'category',
-'field_type' => 'checkbox',
-'add_term' => 0,
-'save_terms' => 0,
-'load_terms' => 0,
-'return_format' => 'object',
-'multiple' => 0,
-'allow_null' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'page_template',
-'operator' => '==',
-'value' => 'pages/articles.php',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'featured_image',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ece3e4518d02',
-'title' => 'Type : Artiste',
-'fields' => array(
-array(
-'key' => 'field_5ece5fd54801b',
-'label' => 'Discipline',
-'name' => 'discipline',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ece815a12942',
-'label' => 'Description',
-'name' => 'description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 0,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'artiste',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'acf_after_title',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ece3e4c78196',
-'title' => 'Type : Capsule',
-'fields' => array(
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'capsule',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_608b33254255a',
-'title' => 'Type : Edition',
-'fields' => array(
-array(
-'key' => 'field_608b332e32a5c',
-'label' => 'Année',
-'name' => 'annee',
-'type' => 'number',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'min' => 2015,
-'max' => 2100,
-'step' => '',
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'edition',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ece3dfb86b1c',
-'title' => 'Type : Établissement',
-'fields' => array(
-array(
-'key' => 'field_5ece6051d4ef4',
-'label' => 'Adresse',
-'name' => 'address',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ece608ad4ef5',
-'label' => 'Description',
-'name' => 'description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 1,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'etablissement',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ece3e4b0cdd6',
-'title' => 'Type : Oeuvre',
-'fields' => array(
-array(
-'key' => 'field_5ef1f1b875986',
-'label' => 'Établissement',
-'name' => 'etablissement',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'spectacle',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'etablissement',
-),
-'taxonomy' => '',
-'allow_null' => 1,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-array(
-'key' => 'field_5ef1f271f95d9',
-'label' => 'Contenu',
-'name' => 'content',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'full',
-'media_upload' => 1,
-'delay' => 0,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'oeuvre',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'excerpt',
-1 => 'discussion',
-2 => 'comments',
-3 => 'revisions',
-4 => 'slug',
-5 => 'author',
-6 => 'format',
-7 => 'page_attributes',
-8 => 'categories',
-9 => 'tags',
-10 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_6091463c07942',
-'title' => 'Type : Partenaire',
-'fields' => array(
-array(
-'key' => 'field_609146473d0f8',
-'label' => 'Nom du partenaire',
-'name' => 'nom_du_partenaire',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'edition',
-7 => 'sousedition',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_609146b73d0fb',
-'label' => 'Description',
-'name' => 'description',
-'type' => 'wysiwyg',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'tabs' => 'all',
-'toolbar' => 'basic',
-'media_upload' => 0,
-'delay' => 0,
-),
-array(
-'key' => 'field_60914fbacea18',
-'label' => 'Site',
-'name' => 'site',
-'type' => 'url',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-),
-array(
-'key' => 'field_6092b50d43c4c',
-'label' => 'Logo',
-'name' => 'logo',
-'type' => 'url',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => '',
-'admin_column_taxonomies' => '',
-'default_value' => '',
-'placeholder' => '',
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'partenaire',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'default',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'excerpt',
-1 => 'discussion',
-2 => 'comments',
-3 => 'revisions',
-4 => 'slug',
-5 => 'author',
-6 => 'format',
-7 => 'page_attributes',
-8 => 'categories',
-9 => 'tags',
-10 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_6091471e85c3c',
-'title' => 'Type : Partenariat',
-'fields' => array(
-array(
-'key' => 'field_6091472ad3fb1',
-'label' => 'Sous-édition',
-'name' => 'sous-edition',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'sousedition',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'sousedition',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-array(
-'key' => 'field_6091488266a39',
-'label' => 'Partenaire',
-'name' => 'partenaire',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'partenaire',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'partenaire',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'partenariat',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'default',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_608b3fe4b1000',
-'title' => 'Type : Sous-Edition',
-'fields' => array(
-array(
-'key' => 'field_608b3ff1a9985',
-'label' => 'Région',
-'name' => 'region',
-'type' => 'text',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'edition',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_608b4086a9986',
-'label' => 'Edition',
-'name' => 'edition',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'edition',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'edition',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-array(
-'key' => 'field_609298afee1ed',
-'label' => 'Direction artistique',
-'name' => 'direction_artistique',
-'type' => 'text',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'edition',
-7 => 'sousedition',
-8 => 'partenariat',
-9 => 'partenaire',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_6093e610649cd',
-'label' => 'Description',
-'name' => 'description',
-'type' => 'text',
-'instructions' => '',
-'required' => 1,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 0,
-'admin_column_post_types' => array(
-0 => 'post',
-1 => 'page',
-2 => 'etablissement',
-3 => 'artiste',
-4 => 'spectacle',
-5 => 'oeuvre',
-6 => 'edition',
-7 => 'sousedition',
-8 => 'partenariat',
-9 => 'partenaire',
-),
-'admin_column_taxonomies' => array(
-0 => 'category',
-1 => 'post_tag',
-2 => 'link_category',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'sousedition',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'categories',
-10 => 'tags',
-11 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-acf_add_local_field_group(array(
-'key' => 'group_5ece3e4975192',
-'title' => 'Type : Spectacle',
-'fields' => array(
-array(
-'key' => 'field_5ece5cc0d8eb9',
-'label' => 'Date',
-'name' => 'date',
-'type' => 'date_picker',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'display_format' => 'd/m/Y',
-'return_format' => 'j F',
-'first_day' => 1,
-),
-array(
-'key' => 'field_5ece5db2486c0',
-'label' => 'Heure',
-'name' => 'time',
-'type' => 'text',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'default_value' => '',
-'placeholder' => '',
-'prepend' => '',
-'append' => '',
-'maxlength' => '',
-),
-array(
-'key' => 'field_5ece5d08d8eba',
-'label' => 'Artiste',
-'name' => 'artiste',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'spectacle',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'artiste',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-array(
-'key' => 'field_5ece5d5cd8ebc',
-'label' => 'Établissement',
-'name' => 'etablissement',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'spectacle',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'etablissement',
-),
-'taxonomy' => '',
-'allow_null' => 1,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-array(
-'key' => 'field_608b419eafbca',
-'label' => 'Sous Edition',
-'name' => 'sousedition',
-'type' => 'post_object',
-'instructions' => '',
-'required' => 0,
-'conditional_logic' => 0,
-'wrapper' => array(
-'width' => '',
-'class' => '',
-'id' => '',
-),
-'admin_column_enabled' => 1,
-'admin_column_post_types' => array(
-0 => 'sousedition',
-),
-'admin_column_taxonomies' => '',
-'post_type' => array(
-0 => 'sousedition',
-),
-'taxonomy' => '',
-'allow_null' => 0,
-'multiple' => 0,
-'return_format' => 'object',
-'ui' => 1,
-),
-),
-'location' => array(
-array(
-array(
-'param' => 'post_type',
-'operator' => '==',
-'value' => 'spectacle',
-),
-),
-),
-'menu_order' => 0,
-'position' => 'normal',
-'style' => 'seamless',
-'label_placement' => 'top',
-'instruction_placement' => 'label',
-'hide_on_screen' => array(
-0 => 'the_content',
-1 => 'excerpt',
-2 => 'discussion',
-3 => 'comments',
-4 => 'revisions',
-5 => 'slug',
-6 => 'author',
-7 => 'format',
-8 => 'page_attributes',
-9 => 'featured_image',
-10 => 'categories',
-11 => 'tags',
-12 => 'send-trackbacks',
-),
-'active' => true,
-'description' => '',
-));
-
-endif;
+[
+  {
+    "key": "group_5ed0d80e6a65a",
+    "title": "Page : intro",
+    "fields": [
+      {
+        "key": "field_5ed0d8689487f",
+        "label": "Titre",
+        "name": "intro_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "capsule"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ed0d87094880",
+        "label": "Texte",
+        "name": "intro_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "page"
+        },
+        {
+          "param": "page_template",
+          "operator": "!=",
+          "value": "pages\/accueil.php"
+        }
+      ]
+    ],
+    "menu_order": -1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ecfcec0f2915",
+    "title": "Options : Footer",
+    "fields": [
+      {
+        "key": "field_5ecfced44a8e4",
+        "label": "Partenaires",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_5ecfcedf4a8e5",
+        "label": "Liste des partenaires",
+        "name": "partners",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "",
+        "min": 0,
+        "max": 0,
+        "layout": "table",
+        "button_label": "",
+        "sub_fields": [
+          {
+            "key": "field_5ecfcef34a8e6",
+            "label": "Logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "admin_column_enabled": 0,
+            "admin_column_post_types": "",
+            "admin_column_taxonomies": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+          },
+          {
+            "key": "field_5ecfcf024a8e7",
+            "label": "Lien",
+            "name": "url",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "admin_column_enabled": 0,
+            "admin_column_post_types": "",
+            "admin_column_taxonomies": "",
+            "default_value": "",
+            "placeholder": ""
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "options_page",
+          "operator": "==",
+          "value": "footer-settings"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ecfb434a039c",
+    "title": "Page : Accueil",
+    "fields": [
+      {
+        "key": "field_5ecfb4b0e78d1",
+        "label": "Introduction : description",
+        "name": "intro_description",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "placeholder": "",
+        "maxlength": "",
+        "rows": "",
+        "new_lines": "br"
+      },
+      {
+        "key": "field_5ecfb4cce78d2",
+        "label": "Introduction : date",
+        "name": "intro_date",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "capsule"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ecfb4e0e78d3",
+        "label": "À propos : description",
+        "name": "apropos_description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      },
+      {
+        "key": "field_5ecfb4f6e78d4",
+        "label": "Articles : titre",
+        "name": "articles_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ed10c82fbc9e",
+        "label": "Articles : description",
+        "name": "articles_description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      },
+      {
+        "key": "field_5ed0d772a0a51",
+        "label": "Articles : lien bouton",
+        "name": "articles_link",
+        "type": "page_link",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "page"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "allow_archives": 0,
+        "multiple": 0
+      },
+      {
+        "key": "field_5ecfb534e78d5",
+        "label": "Exposition : description",
+        "name": "exposition_description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "capsule"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "pages\/accueil.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ef1fb229632c",
+    "title": "Page : default",
+    "fields": [
+      {
+        "key": "field_5ef1fb2ff0152",
+        "label": "Contenu",
+        "name": "content",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "default"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ecf74a6c649b",
+    "title": "Page : Le programme",
+    "fields": [],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "pages\/programme.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ef1f5f219116",
+    "title": "Page : Programme menu",
+    "fields": [],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "pages\/pages.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ecf7783058da",
+    "title": "Page : Ressources\/Capsules",
+    "fields": [
+      {
+        "key": "field_5ecf77ce44175",
+        "label": "Categories",
+        "name": "categories",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "taxonomy": "category",
+        "field_type": "checkbox",
+        "add_term": 0,
+        "save_terms": 0,
+        "load_terms": 0,
+        "return_format": "object",
+        "multiple": 0,
+        "allow_null": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "pages\/articles.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ece3e4518d02",
+    "title": "Type : Artiste",
+    "fields": [
+      {
+        "key": "field_5ece5fd54801b",
+        "label": "Discipline",
+        "name": "discipline",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ece815a12942",
+        "label": "Description",
+        "name": "description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "artiste"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ece3e4c78196",
+    "title": "Type : Capsule",
+    "fields": [],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "capsule"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_608b33254255a",
+    "title": "Type : Edition",
+    "fields": [
+      {
+        "key": "field_608b332e32a5c",
+        "label": "Année",
+        "name": "annee",
+        "type": "number",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "min": 2015,
+        "max": 2100,
+        "step": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "edition"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ece3dfb86b1c",
+    "title": "Type : Établissement",
+    "fields": [
+      {
+        "key": "field_5ece6051d4ef4",
+        "label": "Adresse",
+        "name": "address",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ece608ad4ef5",
+        "label": "Description",
+        "name": "description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "etablissement"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ece3e4b0cdd6",
+    "title": "Type : Oeuvre",
+    "fields": [
+      {
+        "key": "field_5ef1f1b875986",
+        "label": "Établissement",
+        "name": "etablissement",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "spectacle"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "etablissement"
+        ],
+        "taxonomy": "",
+        "allow_null": 1,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_5ef1f271f95d9",
+        "label": "Contenu",
+        "name": "content",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "oeuvre"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_6091463c07942",
+    "title": "Type : Partenaire",
+    "fields": [
+      {
+        "key": "field_609146473d0f8",
+        "label": "Nom du partenaire",
+        "name": "nom_du_partenaire",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "edition",
+          "sousedition"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_609146b73d0fb",
+        "label": "Description",
+        "name": "description",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "delay": 0
+      },
+      {
+        "key": "field_60914fbacea18",
+        "label": "Site",
+        "name": "site",
+        "type": "url",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "placeholder": ""
+      },
+      {
+        "key": "field_6092b50d43c4c",
+        "label": "Logo",
+        "name": "logo",
+        "type": "url",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": "",
+        "admin_column_taxonomies": "",
+        "default_value": "",
+        "placeholder": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "partenaire"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_6091471e85c3c",
+    "title": "Type : Partenariat",
+    "fields": [
+      {
+        "key": "field_6091472ad3fb1",
+        "label": "Sous-édition",
+        "name": "sous-edition",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "sousedition"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "sousedition"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_6091488266a39",
+        "label": "Partenaire",
+        "name": "partenaire",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "partenaire"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "partenaire"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "partenariat"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_608b3fe4b1000",
+    "title": "Type : Sous-Edition",
+    "fields": [
+      {
+        "key": "field_608b3ff1a9985",
+        "label": "Région",
+        "name": "region",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "edition"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_608b4086a9986",
+        "label": "Edition",
+        "name": "edition",
+        "type": "post_object",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "edition"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "edition"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_609298afee1ed",
+        "label": "Direction artistique",
+        "name": "direction_artistique",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "edition",
+          "sousedition",
+          "partenariat",
+          "partenaire"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6093e610649cd",
+        "label": "Description",
+        "name": "description",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 0,
+        "admin_column_post_types": [
+          "post",
+          "page",
+          "etablissement",
+          "artiste",
+          "spectacle",
+          "oeuvre",
+          "edition",
+          "sousedition",
+          "partenariat",
+          "partenaire"
+        ],
+        "admin_column_taxonomies": [
+          "category",
+          "post_tag",
+          "link_category"
+        ],
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "sousedition"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  },
+  {
+    "key": "group_5ece3e4975192",
+    "title": "Type : Spectacle",
+    "fields": [
+      {
+        "key": "field_5ece5cc0d8eb9",
+        "label": "Date",
+        "name": "date",
+        "type": "date_picker",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "display_format": "d\/m\/Y",
+        "return_format": "j F",
+        "first_day": 1
+      },
+      {
+        "key": "field_5ece5db2486c0",
+        "label": "Heure",
+        "name": "time",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_5ece5d08d8eba",
+        "label": "Artiste",
+        "name": "artiste",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "spectacle"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "artiste"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_5ece5d5cd8ebc",
+        "label": "Établissement",
+        "name": "etablissement",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "spectacle"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "etablissement"
+        ],
+        "taxonomy": "",
+        "allow_null": 1,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      },
+      {
+        "key": "field_608b419eafbca",
+        "label": "Sous Edition",
+        "name": "sousedition",
+        "type": "post_object",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "admin_column_enabled": 1,
+        "admin_column_post_types": [
+          "sousedition"
+        ],
+        "admin_column_taxonomies": "",
+        "post_type": [
+          "sousedition"
+        ],
+        "taxonomy": "",
+        "allow_null": 0,
+        "multiple": 0,
+        "return_format": "object",
+        "ui": 1
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "spectacle"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+      "the_content",
+      "excerpt",
+      "discussion",
+      "comments",
+      "revisions",
+      "slug",
+      "author",
+      "format",
+      "page_attributes",
+      "featured_image",
+      "categories",
+      "tags",
+      "send-trackbacks"
+    ],
+    "active": true,
+    "description": ""
+  }
+]
