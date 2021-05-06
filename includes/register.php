@@ -180,6 +180,8 @@ register_post_type('partenaire', array(
     'title',
     'editor',
     'thumbnail',
+    
+    
   ),
   'can_export' => true,
 ));

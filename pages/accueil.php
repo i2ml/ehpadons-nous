@@ -31,8 +31,8 @@ get_header('compiled');
 .slider-container {
   position: relative;
   margin: 0 auto;
-  width: 800px;
-  height: 600px;
+  width: 600px;
+  height: 400px;
 }
 .slider-container .bullet-container {
   position: absolute;
@@ -68,7 +68,8 @@ get_header('compiled');
 .slider-container .slider-content .slider-single {
   position: absolute;
   z-index: 0;
-  left: 0;
+  padding-left:2%;
+  padding-right:2%;
   top: 0;
   width: 100%;
   height: 100%;
@@ -76,16 +77,16 @@ get_header('compiled');
 }
 .slider-container .slider-content .slider-single .slider-single-image {
   position: relative;
-  
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  margin-left:2%;
-  margin-right:2%;
+  
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(0);
   opacity: 0;
+  background-color: white;
   
 }
 .slider-container .slider-content .slider-single .slider-single-download {
@@ -102,7 +103,7 @@ get_header('compiled');
   border-radius: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-  opacity: 0;
+  opacity: 1;
 }
 .slider-container .slider-content .slider-single .slider-single-download:hover, .slider-container .slider-content .slider-single .slider-single-download:focus {
   outline: none;
@@ -216,7 +217,7 @@ get_header('compiled');
   position: absolute;
   z-index: 3;
   display: block;
-  right: 85%;
+  right: 99%;
   top: 50%;
   color: black;
   transform: translateY(-50%);
@@ -231,7 +232,7 @@ get_header('compiled');
   position: absolute;
   z-index: 3;
   display: block;
-  left: 85%;
+  left: 99%;
   top: 50%;
   color: black;
   transform: translateY(-50%);
@@ -242,10 +243,29 @@ get_header('compiled');
   border-left: 2px solid #fdc84b;
   margin-left: -2px;
 }
+
 .slider-container .not-visible {
   display: none !important;
 }
+@media screen and (max-width:1080px){
+  .slider-container .slider-left{
+    display:none;
+  }
+  .slider-container .slider-right {
+    display:none;
+  }
+  .slider-container {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+  
+}
+.espacementBot{
+  margin-top:50px;
+}
 
+}
   </style>
 <div class="page__accueil">
 
@@ -397,7 +417,7 @@ get_header('compiled');
                     <?php
                       $compteur = 0;
                       foreach($partenaires as $partenaire){
-                        $visual = wp_get_attachment_image_src(get_post_thumbnail_id($partenaire->ID), 'thumbnail');
+                        $visual = get_fields($partenaire->ID)['logo'];
                         $description = get_fields($partenaire->ID)['description'];
                         $url = get_fields($partenaire->ID)['site'];
                         var_dump($visual[0]);
@@ -407,7 +427,7 @@ get_header('compiled');
                       <div class="slider-single">
                           
                           <a href="<?php echo $url ?>" target="_blank" rel="noreferrer">
-                              <img class="slider-single-image" src="<?php echo $visual[0] ?>"  >
+                              <img class="slider-single-image" src="<?php echo $visual ?>"  >
                           </a>
                           <h1 class="slider-single-title"><?php echo $description ?></h1>
                       </div>            
@@ -423,10 +443,10 @@ get_header('compiled');
           </div>
         </div>
       </div>
-      <img class="" src="<?php echo $visual[0] ?>"  >
+      
                     
                 
-      <footer class="footer">
+      <footer class="footer espacementBot">
         <div class="inner">
           <div class="footer-organizer">
             <span>organisé par :</span>
@@ -476,9 +496,10 @@ get_header('compiled');
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167999934-1"></script>
     <script>
 
-const repeat = false;
+const repeat = true;
 const noArrows = false;
 const noBullets = false;
+
 
 const container = document.querySelector(".slider-container");
 var slide = document.querySelectorAll(".slider-single");
@@ -531,11 +552,15 @@ function initArrows() {
 }
 
 function slideInitial() {
-  initBullets();
+  
+  /*initBullets();*/
   initArrows();
   setTimeout(function () {
     slideRight();
   }, 500);
+  const interval = setInterval(function () {
+    slideRight();
+  }, 5000);
 }
 
 function updateBullet() {
