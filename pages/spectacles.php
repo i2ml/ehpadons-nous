@@ -21,7 +21,7 @@ get_header('compiled');
                 'order' => 'ASC'
             ]);
             foreach ($spectacles as $spectacle) {
-                if (get_field('sousedition', $spectacle->ID)->ID == $_GET["sous-edition"]){
+                if (get_field('sousedition', $spectacle->ID)->ID == $_POST["sous-edition"]){
                     get_view('spectaclePreview');
                }
             }
