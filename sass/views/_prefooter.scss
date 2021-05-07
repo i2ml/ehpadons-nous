@@ -1,12 +1,12 @@
 .prefooter {
   position: relative;
-  
-  
 
   &:before, &:after {
-    content: ''; display: block;
+    content: '';
+    display: block;
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
   }
 
@@ -27,16 +27,17 @@
     position: relative;
     z-index: 1;
     background: white;
-    
+
   }
 
-  .inner {}
+  .inner {
+  }
 
   &-title {
     font-family: $titleFont;
     @include typo($desktop: center xxlarge uppercase, $mobile: xlarge);
-    
-    padding-top : 40px;
+
+    padding-top: 40px;
   }
 
   &-logos {
@@ -53,6 +54,5 @@
       margin-bottom: 20px;
     }
   }
-
 
 }

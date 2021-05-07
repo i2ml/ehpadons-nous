@@ -14,7 +14,7 @@ get_header('compiled');
         <div class="inner">
             <div class="page__pages-list">
                 <?
-                foreach(get_field('pages') as $item) {
+                foreach (get_field('pages') as $item) {
                     $page = $item['page'];
                     ?>
                     <div class="page__pages-item">
