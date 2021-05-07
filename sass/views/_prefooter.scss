@@ -27,7 +27,7 @@
     position: relative;
     z-index: 1;
     background: white;
-    padding:60px 0;
+    
   }
 
   .inner {}
@@ -35,7 +35,8 @@
   &-title {
     font-family: $titleFont;
     @include typo($desktop: center xxlarge uppercase, $mobile: xlarge);
-    margin-bottom: 40px;
+    
+    padding-top : 40px;
   }
 
   &-logos {
