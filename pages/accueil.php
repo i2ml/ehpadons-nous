@@ -164,7 +164,6 @@ get_header('compiled');
                     $compteur = 0;
                     foreach ($partenaires as $partenaire) {
                         $visual = get_fields($partenaire->ID)['logo'];
-                        $description = get_fields($partenaire->ID)['description'];
                         $url = get_fields($partenaire->ID)['site'];
 
                         $compteur += 1;
@@ -175,7 +174,6 @@ get_header('compiled');
                             <a href="<?php echo $url ?>" target="_blank" rel="noreferrer">
                                 <img class="slider-single-image" src="<?php echo $visual ?>">
                             </a>
-                            <h1 class="slider-single-title"><?php echo $description ?></h1>
                         </div>
                         <?php
                     }

@@ -81,15 +81,11 @@ if ($compteur == 0){
                         <?php
                         $partenaire = get_field("partenaire", $partenariat->ID);
                         $visual = get_fields($partenaire->ID)['logo'];
-                        $description = get_fields($partenaire->ID)['description'];
                         $url = get_fields($partenaire->ID)['site'];
                         ?>
-
-
                         <a href="<?php echo $url ?>" target="_blank" rel="noreferrer">
                             <img class="imageSeule" src="<?php echo $visual ?>">
                         </a>
-                        <h1 class="textSeul"><?php echo $description ?></h1>
                     </div>
                 </div>
                 <?php
@@ -105,7 +101,6 @@ if ($compteur == 0){
                             if (get_field("sous-edition", $partenariat->ID)->ID == $_GET["sous-edition"] && $compteur > 1) {
                                 $partenaire = get_field("partenaire", $partenariat->ID);
                                 $visual = get_fields($partenaire->ID)['logo'];
-                                $description = get_fields($partenaire->ID)['description'];
                                 $url = get_fields($partenaire->ID)['site'];
                                 ?>
 
@@ -114,7 +109,6 @@ if ($compteur == 0){
                                     <a href="<?php echo $url ?>" target="_blank" rel="noreferrer">
                                         <img class="slider-single-image" src="<?php echo $visual ?>">
                                     </a>
-                                    <h1 class="slider-single-title"><?php echo $description ?></h1>
                                 </div>
                                 <?php
                             }
