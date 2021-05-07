@@ -181,11 +181,7 @@ function register_all()
         'rewrite' => ['slug' => 'partenaire'],
         'supports' => array(
             'title',
-            'editor',
-            'thumbnail',
-
-
-        ),
+            ),
         'can_export' => true,
     ));
 }

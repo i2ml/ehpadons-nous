@@ -1162,11 +1162,11 @@ if (function_exists('acf_add_local_field_group')):
             ),
             array(
                 'key' => 'field_6092b50d43c4c',
-                'label' => 'Logo',
+                'label' => 'Logo (mettre une image de résolution 500x300 ou en 5:3)',
                 'name' => 'logo',
                 'type' => 'url',
                 'instructions' => '',
-                'required' => 0,
+                'required' => 1,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
