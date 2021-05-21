@@ -29,8 +29,9 @@ get_header('compiled');
         $spectacles = get_posts([
             'post_type' => 'spectacle',
             'posts_per_page' => -1,
-            'orderby' => 'menu_order',
+            'orderby' => 'meta_value',
             'order' => 'ASC'
+            'meta_key' => 'date'
         ]);
         foreach ($spectacles as $spectacle) {
             if (get_field('sousedition', $spectacle->ID)->ID == $_GET["sous-edition"]) {
