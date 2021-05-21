@@ -30,7 +30,7 @@ get_header('compiled');
             'post_type' => 'spectacle',
             'posts_per_page' => -1,
             'orderby' => 'meta_value',
-            'order' => 'ASC'
+            'order' => 'ASC',
             'meta_key' => 'date'
         ]);
         foreach ($spectacles as $spectacle) {
@@ -62,11 +62,7 @@ foreach ($partenariats as $partenariat) {
     }
 }
 
-if ($compteur == 0){
-    ?>
-
-    <?php
-}else{
+if ($compteur != 0){
 ?>
 <div class="prefooter">
     <div class="prefooter-container">

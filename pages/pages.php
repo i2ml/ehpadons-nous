@@ -48,14 +48,11 @@ get_header('compiled');
                         <main>
                             <?= $editionfields['description'] ?>
                         </main>
-                    
-                            
-                            <a class="button-<?= ["green", "yellow", "pink"][rand(0, 2)] ?>" href="spectacles?sous-edition=<?= $sousedition->ID ?>"
-                               onclick="$(this).closest('form').submit()">
-                                VOIR LA PAGE
-                            </a>
-                        
-
+                        <a class="button-<?= ["green", "yellow", "pink"][rand(0, 2)] ?>"
+                           href="spectacles/?sous-edition=<?= $sousedition->ID ?>"
+                           onclick="$(this).closest('form').submit()">
+                            VOIR LA PAGE
+                        </a>
 
                     </div>
                     <?php
